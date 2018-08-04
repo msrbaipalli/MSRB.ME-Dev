@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+.title p {
+  font-size: 50px;
+  letter-spacing: 3px;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  line-height: .8em;
+}
+
+.name p {
+  font-size: 22px;
+  text-transform: uppercase;
+  line-height: 1em;
+  color: #fff;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: .14em;
+}
+
+.tagLine p {
+  font-size: 22px;
+  color: #A3A3A3;
+  line-height: 1.15em;
+}
+
+.emailId, .searchMore {
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .10em;
+  line-height: 4em;
+}
+
+.searchMore {
+  line-height: 1em;
+}
+
+.socialIcons {
+  padding: 20px 0px;
+}
+
+.socialIcons p {
+  letter-spacing: 1.2em;
+  display: inline-block;
+}
+
+.socialIcons p i:hover {
+  color: #fff;
+}
+
+.socialIcons p i {
+  font-size: 32px;
+  color: #BABBBD;
+}
+

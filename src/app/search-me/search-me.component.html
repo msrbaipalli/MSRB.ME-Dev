@@ -1,0 +1,26 @@
+<div class="searchMe">
+  <!-- Actual search box -->
+  <div class="form-group searchMe-div">
+    <span class="fa fa-search form-control-feedback"></span>
+    <input
+      type="text"
+      (focusout) = "searchFocus = false"
+      (keydown)="search(searchItem)"
+      [(ngModel)]="searchItem"
+      class="form-control"
+      placeholder="Search Me!">
+  </div>
+
+  <div *ngIf="searchFocus" class="form-group searchMeResult-div">
+    <div *ngFor="let item of items">
+      <p class="searchItem">
+        {{item}}
+      </p>
+    </div>
+    <div *ngIf="items?.length < 1">
+      <p class="searchItem">
+        Search function is under construction!
+      </p>
+    </div>
+  </div>
+</div>
