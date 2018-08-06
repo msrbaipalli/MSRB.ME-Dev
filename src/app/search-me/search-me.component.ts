@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 @Component({
   selector: 'app-search-me',
@@ -10,13 +12,15 @@ export class SearchMeComponent implements OnInit {
   items = [];
   myItems = ['About','Experience','Contact'];
 
-  constructor() { }
+  constructor(private modalService: BsModalService) {
+  }
 
   ngOnInit() {
   }
 
   search(item) {
-    if (item.trim() !== "") {
+    this.items = [];
+    if (item !== "") {
       this.searchFocus = true;
     }
     else {
@@ -25,4 +29,14 @@ export class SearchMeComponent implements OnInit {
 
     return this.items;
   }
+
+  searchButton(item) {
+    this.searchFocus = true;
+    this.items = ['About Me!','Contact'];
+    return this.items;
+  }
+
+  /*openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
+  }*/
 }

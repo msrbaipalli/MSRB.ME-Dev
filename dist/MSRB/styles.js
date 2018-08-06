@@ -580,8 +580,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/mangabaipalli/Desktop/MSRB/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-module.exports = __webpack_require__(/*! /Users/mangabaipalli/Desktop/MSRB/src/styles.css */"./src/styles.css");
+__webpack_require__(/*! /Users/mangabaipalli/Desktop/MSRB.ME-Dev/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+module.exports = __webpack_require__(/*! /Users/mangabaipalli/Desktop/MSRB.ME-Dev/src/styles.css */"./src/styles.css");
 
 
 /***/ })

@@ -4,6 +4,9 @@
     width: 70%;
     margin: 30px auto;
 }
+.searchMe button {
+    color: #fff;
+}
 
 /* Bootstrap 4 text input with search icon */
 

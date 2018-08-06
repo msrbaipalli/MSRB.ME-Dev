@@ -93,13 +93,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @sgbj/angular-gist */ "./node_modules/@sgbj/angular-gist/angular-gist.umd.js");
-/* harmony import */ var _sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _search_me_search_me_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./search-me/search-me.component */ "./src/app/search-me/search-me.component.ts");
-/* harmony import */ var _introduction_introduction_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./introduction/introduction.component */ "./src/app/introduction/introduction.component.ts");
-/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
+/* harmony import */ var ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-bootstrap/dropdown */ "./node_modules/ngx-bootstrap/dropdown/index.js");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/index.js");
+/* harmony import */ var _sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @sgbj/angular-gist */ "./node_modules/@sgbj/angular-gist/angular-gist.umd.js");
+/* harmony import */ var _sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _search_me_search_me_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./search-me/search-me.component */ "./src/app/search-me/search-me.component.ts");
+/* harmony import */ var _introduction_introduction_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./introduction/introduction.component */ "./src/app/introduction/introduction.component.ts");
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
+/* harmony import */ var _modals_about_about_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modals/about/about.component */ "./src/app/modals/about/about.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -115,25 +118,31 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"],
-                _search_me_search_me_component__WEBPACK_IMPORTED_MODULE_6__["SearchMeComponent"],
-                _introduction_introduction_component__WEBPACK_IMPORTED_MODULE_7__["IntroductionComponent"],
-                _footer_footer_component__WEBPACK_IMPORTED_MODULE_8__["FooterComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
+                _search_me_search_me_component__WEBPACK_IMPORTED_MODULE_8__["SearchMeComponent"],
+                _introduction_introduction_component__WEBPACK_IMPORTED_MODULE_9__["IntroductionComponent"],
+                _footer_footer_component__WEBPACK_IMPORTED_MODULE_10__["FooterComponent"],
+                _modals_about_about_component__WEBPACK_IMPORTED_MODULE_11__["AboutComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_3__["GistModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"]
+                _sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_5__["GistModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
+                ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_3__["BsDropdownModule"].forRoot(),
+                ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_4__["ModalModule"].forRoot()
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -332,6 +341,69 @@ var IntroductionComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/modals/about/about.component.css":
+/*!**************************************************!*\
+  !*** ./src/app/modals/about/about.component.css ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/modals/about/about.component.html":
+/*!***************************************************!*\
+  !*** ./src/app/modals/about/about.component.html ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal-header\">\n  <h4 class=\"modal-title pull-left\">Modal</h4>\n  <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"modalRef.hide()\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n  <p *ngFor=\"let item of items\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque\n    delectus\n    enim\n    esse excepturi, impedit,\n    iste magnam officia optio, quam quis quisquam saepe sint unde velit vitae! Animi in iusto\n    ut?</p>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/modals/about/about.component.ts":
+/*!*************************************************!*\
+  !*** ./src/app/modals/about/about.component.ts ***!
+  \*************************************************/
+/*! exports provided: AboutComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutComponent", function() { return AboutComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AboutComponent = /** @class */ (function () {
+    function AboutComponent() {
+    }
+    AboutComponent.prototype.ngOnInit = function () {
+    };
+    AboutComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-about',
+            template: __webpack_require__(/*! ./about.component.html */ "./src/app/modals/about/about.component.html"),
+            styles: [__webpack_require__(/*! ./about.component.css */ "./src/app/modals/about/about.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AboutComponent);
+    return AboutComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/search-me/search-me.component.css":
 /*!***************************************************!*\
   !*** ./src/app/search-me/search-me.component.css ***!
@@ -339,7 +411,7 @@ var IntroductionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* Styles for wrapping the search box */\n\n.searchMe {\n    width: 70%;\n    margin: 30px auto;\n}\n\n/* Bootstrap 4 text input with search icon */\n\n.searchMe-div .form-control {\n    padding-left: 2.375rem;\n}\n\n.searchMe-div .form-control-feedback {\n    position: absolute;\n    z-index: 2;\n    display: block;\n    width: 2.375rem;\n    height: 2.375rem;\n    line-height: 2.375rem;\n    text-align: center;\n    pointer-events: none;\n    color: #ffffff;\n    background: #A3A3A3;\n}\n\n.searchMe-div .form-control {\n    color: #ffffff;\n    background: #A3A3A3;\n    border: none;\n    border-radius: 0px;\n}\n\n.searchMe-div span {\n    border-radius: 4px;\n}\n\n.searchMe-div .form-control::-webkit-input-placeholder {\n    color: #ffffff;\n    opacity: 1;\n}\n\n.searchMe-div .form-control:-ms-input-placeholder {\n    color: #ffffff;\n    opacity: 1;\n}\n\n.searchMe-div .form-control::-ms-input-placeholder {\n    color: #ffffff;\n    opacity: 1;\n}\n\n.searchMe-div .form-control::placeholder {\n    color: #ffffff;\n    opacity: 1;\n}\n\n.searchMeResult-div {\n    z-index: 1;\n    top: 70px;\n    width: 70%;\n    position: absolute;\n}\n\n.searchItem {\n    margin: 0px;\n    color: #fff;\n    background: #666666;\n    padding: 10px;\n    border-color: #F2F2F2;\n    border-style: groove;\n    border-width: 0px 0px 1px 0px;\n}\n"
+module.exports = "/* Styles for wrapping the search box */\n\n.searchMe {\n    width: 70%;\n    margin: 30px auto;\n}\n\n.searchMe button {\n    color: #fff;\n}\n\n/* Bootstrap 4 text input with search icon */\n\n.searchMe-div .form-control {\n    padding-left: 2.375rem;\n}\n\n.searchMe-div .form-control-feedback {\n    position: absolute;\n    z-index: 2;\n    display: block;\n    width: 2.375rem;\n    height: 2.375rem;\n    line-height: 2.375rem;\n    text-align: center;\n    pointer-events: none;\n    color: #ffffff;\n    background: #A3A3A3;\n}\n\n.searchMe-div .form-control {\n    color: #ffffff;\n    background: #A3A3A3;\n    border: none;\n    border-radius: 0px;\n    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);\n}\n\n.searchMe-div span {\n    border-radius: 4px;\n}\n\n.searchMe-div .form-control::-webkit-input-placeholder {\n    color: #ffffff;\n    opacity: 1;\n}\n\n.searchMe-div .form-control:-ms-input-placeholder {\n    color: #ffffff;\n    opacity: 1;\n}\n\n.searchMe-div .form-control::-ms-input-placeholder {\n    color: #ffffff;\n    opacity: 1;\n}\n\n.searchMe-div .form-control::placeholder {\n    color: #ffffff;\n    opacity: 1;\n}\n\n.searchMeResult-div {\n    z-index: 1;\n    top: 75px;\n    width: 70%;\n    position: absolute;\n}\n\n.searchItem {\n    margin: 0px;\n    color: #212121;\n    background: #fff;\n    padding: 10px;\n    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n    transition: all 0.3s cubic-bezier(.25,.8,.25,1);\n}\n\n.searchItem:hover {\n    background: #F5F5F5;\n    cursor: pointer;\n}\n\n.searchMeResult-div .searchItem::after {\n    content: \"\";\n    position: absolute;\n    bottom: 100%;\n    left: 50%;\n    margin-left: -5px;\n    border-width: 5px;\n    border-style: solid;\n    border-color: transparent transparent #fff transparent;\n}"
 
 /***/ }),
 
@@ -350,7 +422,7 @@ module.exports = "/* Styles for wrapping the search box */\n\n.searchMe {\n    w
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"searchMe\">\n  <!-- Actual search box -->\n  <div class=\"form-group searchMe-div\">\n    <span class=\"fa fa-search form-control-feedback\"></span>\n    <input\n      type=\"text\"\n      (focusout) = \"searchFocus = false\"\n      (keydown)=\"search(searchItem)\"\n      [(ngModel)]=\"searchItem\"\n      class=\"form-control\"\n      placeholder=\"Search Me!\">\n  </div>\n\n  <div *ngIf=\"searchFocus\" class=\"form-group searchMeResult-div\">\n    <div *ngFor=\"let item of items\">\n      <p class=\"searchItem\">\n        {{item}}\n      </p>\n    </div>\n    <div *ngIf=\"items?.length < 1\">\n      <p class=\"searchItem\">\n        Search function is under construction!\n      </p>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"searchMe\">\n    <!-- Actual search box -->\n    <div class=\"form-group input-group-prepend searchMe-div\" dropdown>\n        <span class=\"fa fa-search form-control-feedback\"></span>\n        <input\n                type=\"text\"\n                (focusout)=\"searchFocus = false\"\n                (keydown)=\"search(searchItem)\"\n                [(ngModel)]=\"searchItem\"\n                class=\"form-control\"\n                placeholder=\"Search Me!\">\n        <div class=\"input-group-append\">\n            <button (focusout)=\"searchFocus = false\" (click)=\"searchButton()\" dropdownToggle\n                    class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\"\n                    aria-haspopup=\"true\" aria-expanded=\"false\">Easy Access\n            </button>\n        </div>\n    </div>\n\n    <div *ngIf=\"searchFocus\" class=\"form-group searchMeResult-div\">\n        <div *ngFor=\"let item of items\">\n            <p class=\"searchItem\" (click)=\"openModal(template)\">\n                {{item}}\n            </p>\n        </div>\n        <div *ngIf=\"items?.length < 1\">\n            <p class=\"searchItem\">\n                <i class=\"fa fa-exclamation-circle\" aria-hidden=\"true\"></i>\n                No results found!\n            </p>\n        </div>\n    </div>\n</div>\n\n<!--<p class=\"searchItem\" (click)=\"openModal(template)\"> dsgvfsgfd </p>-->\n\n<ng-template #template>\n    <div class=\"modal-header\">\n        <h4 class=\"modal-title pull-left\">Modal</h4>\n        <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"modalRef.hide()\">\n            <span aria-hidden=\"true\">&times;</span>\n        </button>\n    </div>\n    <div class=\"modal-body\">\n        <p *ngFor=\"let item of items\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque\n            delectus\n            enim\n            esse excepturi, impedit,\n            iste magnam officia optio, quam quis quisquam saepe sint unde velit vitae! Animi in iusto\n            ut?</p>\n    </div>\n</ng-template>\n"
 
 /***/ }),
 
@@ -365,6 +437,7 @@ module.exports = "<div class=\"searchMe\">\n  <!-- Actual search box -->\n  <div
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchMeComponent", function() { return SearchMeComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -375,20 +448,28 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var SearchMeComponent = /** @class */ (function () {
-    function SearchMeComponent() {
+    function SearchMeComponent(modalService) {
+        this.modalService = modalService;
         this.items = [];
         this.myItems = ['About', 'Experience', 'Contact'];
     }
     SearchMeComponent.prototype.ngOnInit = function () {
     };
     SearchMeComponent.prototype.search = function (item) {
-        if (item.trim() !== "") {
+        this.items = [];
+        if (item !== "") {
             this.searchFocus = true;
         }
         else {
             this.searchFocus = false;
         }
+        return this.items;
+    };
+    SearchMeComponent.prototype.searchButton = function (item) {
+        this.searchFocus = true;
+        this.items = ['About Me!', 'Contact'];
         return this.items;
     };
     SearchMeComponent = __decorate([
@@ -397,7 +478,7 @@ var SearchMeComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./search-me.component.html */ "./src/app/search-me/search-me.component.html"),
             styles: [__webpack_require__(/*! ./search-me.component.css */ "./src/app/search-me/search-me.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalService"]])
     ], SearchMeComponent);
     return SearchMeComponent;
 }());
@@ -466,7 +547,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/mangabaipalli/Desktop/MSRB/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/mangabaipalli/Desktop/MSRB.ME-Dev/src/main.ts */"./src/main.ts");
 
 
 /***/ })
