@@ -29,6 +29,8 @@
     background: #A3A3A3;
     border: none;
     border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
 }
 
 .searchMe-div span {
@@ -42,17 +44,32 @@
 
 .searchMeResult-div {
     z-index: 1;
-    top: 70px;
+    top: 75px;
     width: 70%;
     position: absolute;
 }
 
 .searchItem {
     margin: 0px;
-    color: #fff;
-    background: #666666;
+    color: #212121;
+    background: #fff;
     padding: 10px;
-    border-color: #F2F2F2;
-    border-style: groove;
-    border-width: 0px 0px 1px 0px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.searchItem:hover {
+    background: #F5F5F5;
+    cursor: pointer;
+}
+
+.searchMeResult-div .searchItem::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
 }
