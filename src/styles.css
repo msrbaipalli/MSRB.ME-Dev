@@ -35,6 +35,10 @@ body:before {
   margin-top: -32767px;
 }
 
+.modal-dialog {
+  max-width: 95%;
+}
+
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,

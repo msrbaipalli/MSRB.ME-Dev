@@ -32,11 +32,12 @@ export class SearchMeComponent implements OnInit {
 
   searchButton(item) {
     this.searchFocus = true;
-    this.items = ['About Me!','Contact'];
+    this.items = [{title:'About Me!'},{title:'Contact'}];
     return this.items;
   }
 
-  /*openModal(template: TemplateRef<any>) {
+  openModal(template: TemplateRef<any>, title) {
+    this.searchFocus = false;
     this.modalRef = this.modalService.show(template);
-  }*/
+  }
 }
