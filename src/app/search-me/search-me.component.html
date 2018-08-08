@@ -3,19 +3,31 @@
     <div class="form-group input-group-prepend searchMe-div" dropdown>
         <span class="fa fa-search form-control-feedback"></span>
         <input type="text"
+               (focusout) = "searchFocus = false"
                (keydown)="search(searchItem)"
                [(ngModel)]="searchItem"
                class="form-control"
                placeholder="Search Me!">
         <div class="input-group-append">
-            <button (click)="searchButton()"
+            <button (click)="openModal(longStoryShort)"
                     dropdownToggle
-                    class="btn btn-outline-secondary dropdown-toggle searchButton"
+                    class="btn btn-outline-secondary searchButton"
                     type="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
-                    ria-expanded="false">Easy Access
+                    ria-expanded="false"><i class="fas fa-history"></i> Long Story Short
             </button>
+            <ng-template #longStoryShort>
+                <div class="modal-header">
+                    <h4 class="modal-title pull-left">Long Story Short</h4>
+                    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <app-long-story-short></app-long-story-short>
+                </div>
+            </ng-template>
         </div>
     </div>
 
@@ -39,7 +51,7 @@
         <div *ngIf="items?.length < 1">
             <p class="searchItem">
                 <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                No results found!
+                Search function is under construction!
             </p>
         </div>
     </div>

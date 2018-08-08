@@ -39,6 +39,17 @@ body:before {
   max-width: 95%;
 }
 
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}
+
+/* no outline for non-keyboard-inputs elements */
+button:focus,
+select:focus {
+  outline: none;
+}
+
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,

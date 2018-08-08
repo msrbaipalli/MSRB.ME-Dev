@@ -22,7 +22,7 @@
 }
 
 .tagLine p {
-  font-size: 22px;
+  font-size: 20px;
   color: #A3A3A3;
   line-height: 1.15em;
 }
@@ -35,9 +35,16 @@
   line-height: 4em;
 }
 
-.searchMore {
-  line-height: 1em;
+.emailId a {
+    color: #fff;
+    line-height: 1.5em;
 }
+
+.emailId a:hover {
+    color: #BABBBD;
+    text-decoration: none;
+}
+
 
 .socialIcons {
   padding: 20px 0px;
@@ -57,3 +64,16 @@
   color: #BABBBD;
 }
 
+.searchMore p{
+    color: #BABBBD;
+    line-height: 2em;
+}
+.searchMore .lss {
+    color: #fff;
+    line-height: 2em;
+}
+
+.searchMore .lss:hover {
+    color: #BABBBD;
+    cursor: pointer;
+}

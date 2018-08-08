@@ -11,6 +11,7 @@ import { SearchMeComponent } from './search-me/search-me.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './modals/about/about.component';
+import { LongStoryShortComponent } from './modals/long-story-short/long-story-short.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AboutComponent } from './modals/about/about.component';
     SearchMeComponent,
     IntroductionComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    LongStoryShortComponent
   ],
   imports: [
     BrowserModule,

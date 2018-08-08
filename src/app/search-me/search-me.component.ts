@@ -9,6 +9,7 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 })
 export class SearchMeComponent implements OnInit {
   searchFocus;
+  modalRef;
   items = [];
   myItems = ['About','Experience','Contact'];
 
@@ -36,7 +37,7 @@ export class SearchMeComponent implements OnInit {
     return this.items;
   }
 
-  openModal(template: TemplateRef<any>, title) {
+  openModal(template) {
     this.searchFocus = false;
     this.modalRef = this.modalService.show(template);
   }
