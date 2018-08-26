@@ -431,7 +431,7 @@ module.exports = "p i {\n    color: #FADD90;\n    -webkit-text-stroke-width: 1px
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  Working on writing the script! <i class=\"fas fa-smile-wink\"></i>\n</p>\n"
+module.exports = ""
 
 /***/ }),
 

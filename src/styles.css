@@ -35,10 +35,6 @@ body:before {
   margin-top: -32767px;
 }
 
-.modal-dialog {
-  max-width: 95%;
-}
-
 .btn:focus,.btn:active {
    outline: none !important;
    box-shadow: none;
@@ -48,6 +44,24 @@ body:before {
 button:focus,
 select:focus {
   outline: none;
+}
+
+.modal-header {
+    background: #6F757B;
+    color: #fff;
+    text-transform: capitalize;
+    border-radius: 0px;
+}
+
+.modal-backdrop
+{
+    background: #3E4346;
+    opacity: .8 !important;
+}
+
+.modal-dialog {
+    max-width: 98%;
+    margin: 18px auto 18px auto
 }
 
 textarea:focus,
