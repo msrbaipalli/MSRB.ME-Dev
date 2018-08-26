@@ -95,15 +95,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-bootstrap/dropdown */ "./node_modules/ngx-bootstrap/dropdown/index.js");
 /* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/index.js");
-/* harmony import */ var _sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @sgbj/angular-gist */ "./node_modules/@sgbj/angular-gist/angular-gist.umd.js");
-/* harmony import */ var _sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _search_me_search_me_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./search-me/search-me.component */ "./src/app/search-me/search-me.component.ts");
-/* harmony import */ var _introduction_introduction_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./introduction/introduction.component */ "./src/app/introduction/introduction.component.ts");
-/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
-/* harmony import */ var _modals_about_about_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modals/about/about.component */ "./src/app/modals/about/about.component.ts");
-/* harmony import */ var _modals_long_story_short_long_story_short_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modals/long-story-short/long-story-short.component */ "./src/app/modals/long-story-short/long-story-short.component.ts");
+/* harmony import */ var ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-bootstrap/tooltip */ "./node_modules/ngx-bootstrap/tooltip/index.js");
+/* harmony import */ var _sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @sgbj/angular-gist */ "./node_modules/@sgbj/angular-gist/angular-gist.umd.js");
+/* harmony import */ var _sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _search_me_search_me_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./search-me/search-me.component */ "./src/app/search-me/search-me.component.ts");
+/* harmony import */ var _introduction_introduction_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./introduction/introduction.component */ "./src/app/introduction/introduction.component.ts");
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
+/* harmony import */ var _modals_about_about_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modals/about/about.component */ "./src/app/modals/about/about.component.ts");
+/* harmony import */ var _modals_long_story_short_long_story_short_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modals/long-story-short/long-story-short.component */ "./src/app/modals/long-story-short/long-story-short.component.ts");
+/* harmony import */ var _modals_long_story_short_work_work_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modals/long-story-short/work/work.component */ "./src/app/modals/long-story-short/work/work.component.ts");
+/* harmony import */ var _modals_long_story_short_education_education_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modals/long-story-short/education/education.component */ "./src/app/modals/long-story-short/education/education.component.ts");
+/* harmony import */ var _modals_long_story_short_skills_skills_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modals/long-story-short/skills/skills.component */ "./src/app/modals/long-story-short/skills/skills.component.ts");
+/* harmony import */ var _modals_long_story_short_interests_interests_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modals/long-story-short/interests/interests.component */ "./src/app/modals/long-story-short/interests/interests.component.ts");
+/* harmony import */ var _modals_long_story_short_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modals/long-story-short/navbar/navbar.component */ "./src/app/modals/long-story-short/navbar/navbar.component.ts");
+/* harmony import */ var _modals_long_story_short_certificates_certificates_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modals/long-story-short/certificates/certificates.component */ "./src/app/modals/long-story-short/certificates/certificates.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -123,29 +130,43 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
+
+
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
-                _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
-                _search_me_search_me_component__WEBPACK_IMPORTED_MODULE_8__["SearchMeComponent"],
-                _introduction_introduction_component__WEBPACK_IMPORTED_MODULE_9__["IntroductionComponent"],
-                _footer_footer_component__WEBPACK_IMPORTED_MODULE_10__["FooterComponent"],
-                _modals_about_about_component__WEBPACK_IMPORTED_MODULE_11__["AboutComponent"],
-                _modals_long_story_short_long_story_short_component__WEBPACK_IMPORTED_MODULE_12__["LongStoryShortComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"],
+                _search_me_search_me_component__WEBPACK_IMPORTED_MODULE_9__["SearchMeComponent"],
+                _introduction_introduction_component__WEBPACK_IMPORTED_MODULE_10__["IntroductionComponent"],
+                _footer_footer_component__WEBPACK_IMPORTED_MODULE_11__["FooterComponent"],
+                _modals_about_about_component__WEBPACK_IMPORTED_MODULE_12__["AboutComponent"],
+                _modals_long_story_short_long_story_short_component__WEBPACK_IMPORTED_MODULE_13__["LongStoryShortComponent"],
+                _modals_long_story_short_work_work_component__WEBPACK_IMPORTED_MODULE_14__["WorkComponent"],
+                _modals_long_story_short_education_education_component__WEBPACK_IMPORTED_MODULE_15__["EducationComponent"],
+                _modals_long_story_short_skills_skills_component__WEBPACK_IMPORTED_MODULE_16__["SkillsComponent"],
+                _modals_long_story_short_interests_interests_component__WEBPACK_IMPORTED_MODULE_17__["InterestsComponent"],
+                _modals_long_story_short_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_18__["NavbarComponent"],
+                _modals_long_story_short_certificates_certificates_component__WEBPACK_IMPORTED_MODULE_19__["CertificatesComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_5__["GistModule"],
+                _sgbj_angular_gist__WEBPACK_IMPORTED_MODULE_6__["GistModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
                 ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_3__["BsDropdownModule"].forRoot(),
-                ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_4__["ModalModule"].forRoot()
+                ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_4__["ModalModule"].forRoot(),
+                ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_5__["TooltipModule"].forRoot()
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -413,6 +434,195 @@ var AboutComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/modals/long-story-short/certificates/certificates.component.css":
+/*!*********************************************************************************!*\
+  !*** ./src/app/modals/long-story-short/certificates/certificates.component.css ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".card {\n     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n      transition: all 0.3s cubic-bezier(.25,.8,.25,1);\n      color: #6E757C;\n      margin-bottom: 25px;\n      border-radius: 0px;\n}\n\n.card-header {\n    background: #878E95;\n    color: #fff;\n}\n\n.marginBottom {\n    margin-bottom: 10px;\n}\n\n.innerCard {\n    box-shadow: none;\n}\n\n.innerCard a{\n    color: #6E757C;\n}\n\n.fas-tag {\n    font-size: 45px;\n    color: #6E757C;\n    padding: 10px;\n}\n\n.card-title {\n    font-size: 32px;\n    color: #6E757C;\n    padding-bottom: 15px;\n}\n\nhr {\n    margin: 30px 0px;\n    padding: .1px 0;\n    background: #6F757B;\n}"
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/certificates/certificates.component.html":
+/*!**********************************************************************************!*\
+  !*** ./src/app/modals/long-story-short/certificates/certificates.component.html ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card\">\n  <div class=\"card-body\">\n    <div class=\"row\">\n      <div class=\"col-sm-1\">\n        <i class=\"fas fa-certificate fas-tag\"></i>\n      </div>\n      <div class=\"col-sm-11\">\n        <h5 class=\" card-title\">Certifications</h5>\n        <div class=\"innerCard\">\n          <div class=\"marginBottom\">\n            <p>\n              <a href=\"https://courses.edx.org/certificates/cfdbf919a099417ab1ea259741291ac2\" target=\"_blank\"><strong><i class=\"fas fa-caret-right\"></i> CS50 Introduction to Computer Science: </strong></a><i class=\"fas fa-at\"></i> Harvard University (edX)\n            </p>\n            <p>\n              <a href=\"https://prod-cert-bucket.s3.amazonaws.com/downloads/2c9c3cc2083a47d79cc5a96a23498d7a/Statement.pdf\" target=\"_blank\"><strong><i class=\"fas fa-caret-right\"></i> Computer Science 101: </strong></a><i class=\"fas fa-at\"></i> Stanford University\n            </p>\n            <p>\n              <a href=\"https://www.freecodecamp.org/certification/bmsrinivasrao007/legacy-front-end\" target=\"_blank\"><strong><i class=\"fas fa-caret-right\"></i> Front End Development: </strong></a><i class=\"fas fa-at\"></i> Free Code Camp\n            </p>\n          </div>\n        </div>\n        <!--<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\">Learn More!</button>-->\n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/certificates/certificates.component.ts":
+/*!********************************************************************************!*\
+  !*** ./src/app/modals/long-story-short/certificates/certificates.component.ts ***!
+  \********************************************************************************/
+/*! exports provided: CertificatesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CertificatesComponent", function() { return CertificatesComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CertificatesComponent = /** @class */ (function () {
+    function CertificatesComponent() {
+    }
+    CertificatesComponent.prototype.ngOnInit = function () {
+    };
+    CertificatesComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-certificates',
+            template: __webpack_require__(/*! ./certificates.component.html */ "./src/app/modals/long-story-short/certificates/certificates.component.html"),
+            styles: [__webpack_require__(/*! ./certificates.component.css */ "./src/app/modals/long-story-short/certificates/certificates.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], CertificatesComponent);
+    return CertificatesComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/education/education.component.css":
+/*!***************************************************************************!*\
+  !*** ./src/app/modals/long-story-short/education/education.component.css ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".card {\n     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n      transition: all 0.3s cubic-bezier(.25,.8,.25,1);\n      color: #6E757C;\n      margin-bottom: 25px;\n      border-radius: 0px;\n}\n\n.card-header {\n    background: #878E95;\n    color: #fff;\n}\n\n.marginBottom {\n    margin-bottom: 10px;\n}\n\n.innerCard {\n    box-shadow: none;\n}\n\n.fas-tag {\n    font-size: 45px;\n    color: #6E757C;\n    padding: 10px;\n}\n\n.card-title {\n    font-size: 32px;\n    color: #6E757C;\n    padding-bottom: 15px;\n}\n\nhr {\n    margin: 30px 0px;\n    padding: .1px 0;\n    background: #6F757B;\n}\n\n.bulletPoints {\n    padding: 10px 40px;\n}"
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/education/education.component.html":
+/*!****************************************************************************!*\
+  !*** ./src/app/modals/long-story-short/education/education.component.html ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card\">\n    <div class=\"card-body\">\n        <div class=\"row\">\n            <div class=\"col-sm-1\">\n                <i class=\"fas fa-graduation-cap fas-tag\"></i>\n            </div>\n            <div class=\"col-sm-11\">\n                <h5 class=\" card-title\">Education</h5>\n                <div class=\"innerCard\">\n                    <div class=\"marginBottom\">\n                        <h5><strong>Master of Science</strong></h5> <strong class=\"highlightColor\"><i class=\"fas fa-at\"></i> Kent State University</strong>\n                    </div>\n                    <div class=\"marginBottom\">\n                        <p>\n                            <strong><i class=\"fas fa-caret-right\"></i> Major: </strong>Computer and Information Sciences\n                        </p>\n                    </div>\n                    <div class=\"marginBottom\">\n                        <p>\n                            <strong><i class=\"fas fa-caret-right\"></i> GPA: </strong>3.7/4.0\n                        </p>\n                    </div>\n                    <div class=\"marginBottom\">\n                        <p>\n                            <strong><i class=\"fas fa-caret-right\"></i> Significant Courses: </strong>Algorithm and\n                            Programming with Data Structures, Enterprise Architecture, Database Management Systems,\n                            Application & Technology Architecture, Requirements & Engineering, and VB Programming.\n                        </p>\n                    </div>\n                </div>\n                <hr>\n                <div class=\"innerCard\">\n                    <div class=\"marginBottom\">\n                        <h5><strong>Bachelor of Technology</strong></h5> <strong class=\"highlightColor\"><i class=\"fas fa-at\"></i> Jawaharlal Nehru Technology\n                        University</strong>\n                    </div>\n                    <div class=\"marginBottom\">\n                        <p>\n                            <strong><i class=\"fas fa-caret-right\"></i> Major: </strong>Computer Science and Engineering\n                        </p>\n                    </div>\n                    <div class=\"marginBottom\">\n                        <p>\n                            <strong><i class=\"fas fa-caret-right\"></i> GPA: </strong>3.2/4.0\n                        </p>\n                    </div>\n                    <div class=\"marginBottom\">\n                        <p>\n                            <strong><i class=\"fas fa-caret-right\"></i> Significant Courses: </strong>Computer\n                            Programming\n                            &amp; Data Structures, Data Communications &amp; Computer Networks, Data Structure\n                            through C++, Data Warehouse &amp; Data Mining, Database Management Systems, Object\n                            Oriented Analysis &amp; Design, Design Patterns, Design &amp; Analysis of Algorithms and\n                            Formal Languages &amp; Automata Theory.\n                        </p>\n                    </div>\n                </div>\n                <!--<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\">Learn More!</button>-->\n            </div>\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/education/education.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/app/modals/long-story-short/education/education.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: EducationComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EducationComponent", function() { return EducationComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var EducationComponent = /** @class */ (function () {
+    function EducationComponent() {
+    }
+    EducationComponent.prototype.ngOnInit = function () {
+    };
+    EducationComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-education',
+            template: __webpack_require__(/*! ./education.component.html */ "./src/app/modals/long-story-short/education/education.component.html"),
+            styles: [__webpack_require__(/*! ./education.component.css */ "./src/app/modals/long-story-short/education/education.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], EducationComponent);
+    return EducationComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/interests/interests.component.css":
+/*!***************************************************************************!*\
+  !*** ./src/app/modals/long-story-short/interests/interests.component.css ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".card {\n     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n      transition: all 0.3s cubic-bezier(.25,.8,.25,1);\n      color: #6E757C;\n      margin-bottom: 25px;\n      border-radius: 0px;\n}\n\n.card-header {\n    background: #878E95;\n    color: #fff;\n}\n\n.innerCard {\n    box-shadow: none;\n}\n\n.fas-tag {\n    font-size: 45px;\n    color: #6E757C;\n    padding: 10px;\n}\n\n.card-title {\n    font-size: 32px;\n    color: #6E757C;\n    padding-bottom: 15px;\n}\n\n.Icons p {\n    color: #6FA3D4;\n    font-size: 50px;\n    display: inline-block;\n    margin-right: 20px;\n}"
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/interests/interests.component.html":
+/*!****************************************************************************!*\
+  !*** ./src/app/modals/long-story-short/interests/interests.component.html ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card\">\n  <div class=\"card-body\">\n    <div class=\"row\">\n      <div class=\"col-sm-1\">\n        <i class=\"fas fa-lightbulb fas-tag\"></i>\n      </div>\n      <div class=\"col-sm-11\">\n        <h5 class=\" card-title\">Interests</h5>\n        <p class=\"card-text\"></p>\n        <div class=\"Icons\">\n          <p><i tooltip=\"Music\" class=\"fas fa-headphones-alt\"></i></p>\n          <p><i tooltip=\"Browsing\" class=\"fab fa-chrome\"></i></p>\n          <p><i tooltip=\"Photography\" class=\"fas fa-camera\"></i></p>\n          <p><i tooltip=\"Exploring\" class=\"fab fa-wpexplorer\"></i></p>\n        </div>\n        <!--<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\">Learn More!</button>-->\n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/interests/interests.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/app/modals/long-story-short/interests/interests.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: InterestsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InterestsComponent", function() { return InterestsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var InterestsComponent = /** @class */ (function () {
+    function InterestsComponent() {
+    }
+    InterestsComponent.prototype.ngOnInit = function () {
+    };
+    InterestsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-interests',
+            template: __webpack_require__(/*! ./interests.component.html */ "./src/app/modals/long-story-short/interests/interests.component.html"),
+            styles: [__webpack_require__(/*! ./interests.component.css */ "./src/app/modals/long-story-short/interests/interests.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], InterestsComponent);
+    return InterestsComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/modals/long-story-short/long-story-short.component.css":
 /*!************************************************************************!*\
   !*** ./src/app/modals/long-story-short/long-story-short.component.css ***!
@@ -420,7 +630,7 @@ var AboutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "p i {\n    color: #FADD90;\n    -webkit-text-stroke-width: 1px;\n    -webkit-text-stroke-color: #E59B3D;\n}"
+module.exports = ""
 
 /***/ }),
 
@@ -431,7 +641,7 @@ module.exports = "p i {\n    color: #FADD90;\n    -webkit-text-stroke-width: 1px
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "<div class=\"row\">\n    <div class=\"col-sm-3\">\n        <app-navbar></app-navbar>\n    </div>\n    <div class=\"col-sm-9\">\n        <app-work></app-work>\n        <app-education></app-education>\n        <app-skills></app-skills>\n        <app-certificates></app-certificates>\n        <app-interests></app-interests>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -470,6 +680,195 @@ var LongStoryShortComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], LongStoryShortComponent);
     return LongStoryShortComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/navbar/navbar.component.css":
+/*!*********************************************************************!*\
+  !*** ./src/app/modals/long-story-short/navbar/navbar.component.css ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".card {\n     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n      transition: all 0.3s cubic-bezier(.25,.8,.25,1);\n      color: #fff;\n      border-radius: 0px;\n}\n\nhr {\n    background: #5582BD;\n    margin-top: 30px;\n}\n\n.row {\n    padding-bottom: 20px;\n}\n\n.col-10 {\n    padding: 0;\n    margin: 0;\n}\n\n.cardBG {\n    background: #7AA2D0;\n}\n\n.myPic {\n    width:100%;\n}\n\n.card-header {\n    background: #878E95;\n    color: #fff;\n}\n\n.innerCard {\n    box-shadow: none;\n}\n\n.fas-tag {\n    font-size: 25px;\n    color: #fff;\n}\n\n.card-title {\n    font-size: 32px;\n    color: #6E757C;\n    padding-bottom: 15px;\n}\n\n.skillsIcon p {\n    color: #6FA3D4;\n    font-size: 50px;\n    display: inline-block;\n    margin-right: 20px;\n}\n\n.emailId a {\n    color: #fff;\n    line-height: 1.5em;\n}\n\n.emailId a:hover {\n    color: #fff;\n    text-decoration: none;\n}"
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/navbar/navbar.component.html":
+/*!**********************************************************************!*\
+  !*** ./src/app/modals/long-story-short/navbar/navbar.component.html ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card\">\n  <img class=\"myPic\" src=\"assets/images/myPic.png\">\n  <div class=\"card-body cardBG\">\n    <div class=\"row arrowUp\">\n      <div class=\"col-2\">\n        <i class=\"fas fa-user fas-tag\"></i>\n      </div>\n      <div class=\"col-10\">\n        <p class=\"card-text\">Hello there!</p>\n        <p class=\"card-text\">I'm Manga | Srinivas, Frontend Developer from India and currently living in the United States.\n          I write JavaScript code most of the time and explore new Frontend frameworks.</p>\n        <hr>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-2\">\n        <i class=\"fas fa-phone fas-tag\"></i>\n      </div>\n      <div class=\"col-10\">\n        <p class=\"card-text\">+1 (234) 716-4429</p>\n        <hr>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col-2\">\n        <i class=\"fas fa-envelope fas-tag\"></i>\n      </div>\n      <div class=\"col-10\">\n        <p class=\"card-text emailId\"><a href=\"mailto:manga.baipalli@gmail.com\" target=\"_top\">manga.baipalli@gmail.com</a></p>\n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/navbar/navbar.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/modals/long-story-short/navbar/navbar.component.ts ***!
+  \********************************************************************/
+/*! exports provided: NavbarComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavbarComponent", function() { return NavbarComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var NavbarComponent = /** @class */ (function () {
+    function NavbarComponent() {
+    }
+    NavbarComponent.prototype.ngOnInit = function () {
+    };
+    NavbarComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-navbar',
+            template: __webpack_require__(/*! ./navbar.component.html */ "./src/app/modals/long-story-short/navbar/navbar.component.html"),
+            styles: [__webpack_require__(/*! ./navbar.component.css */ "./src/app/modals/long-story-short/navbar/navbar.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], NavbarComponent);
+    return NavbarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/skills/skills.component.css":
+/*!*********************************************************************!*\
+  !*** ./src/app/modals/long-story-short/skills/skills.component.css ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".card {\n     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n      transition: all 0.3s cubic-bezier(.25,.8,.25,1);\n      color: #6E757C;\n      margin-bottom: 25px;\n      border-radius: 0px;\n}\n\n.card-header {\n    background: #878E95;\n    color: #fff;\n}\n\n.innerCard {\n    box-shadow: none;\n}\n\n.fas-tag {\n    font-size: 45px;\n    color: #6E757C;\n    padding: 10px;\n}\n\n.card-title {\n    font-size: 32px;\n    color: #6E757C;\n    padding-bottom: 15px;\n}\n\n.skillsIcon p {\n    color: #6FA3D4;\n    font-size: 50px;\n    display: inline-block;\n    margin-right: 20px;\n}"
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/skills/skills.component.html":
+/*!**********************************************************************!*\
+  !*** ./src/app/modals/long-story-short/skills/skills.component.html ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card\">\n  <div class=\"card-body\">\n    <div class=\"row\">\n      <div class=\"col-sm-1\">\n        <i class=\"fas fa-drafting-compass fas-tag\"></i>\n      </div>\n      <div class=\"col-sm-11\">\n        <h5 class=\" card-title\">Skills</h5>\n        <p class=\"card-text\">PROGRAMMING LANGUAGES</p>\n        <div class=\"skillsIcon\">\n          <p><i tooltip=\"HTML5\" class=\"fab fa-html5\"></i></p>\n          <p><i tooltip=\"CSS3\" class=\"fab fa-css3-alt\"></i></p>\n          <p><i tooltip=\"SASS\" class=\"fab fa-sass\"></i></p>\n          <p><i tooltip=\"LESS\" class=\"fab fa-less\"></i></p>\n          <p><i tooltip=\"Angular\" class=\"fab fa-angular\"></i></p>\n          <p><i tooltip=\"JavaScript\" class=\"fab fa-js\"></i></p>\n          <p><i tooltip=\"NodeJs\" class=\"fab fa-node-js\"></i></p>\n          <p><i tooltip=\"Java\" class=\"fab fa-java\"></i></p>\n          <p><i tooltip=\"Dot Net\" class=\"fab fa-microsoft\"></i></p>\n        </div>\n\n        <p class=\"card-text\">TOOLS</p>\n        <div class=\"skillsIcon\">\n          <p><i tooltip=\"npm\" class=\"fab fa-npm\"></i></p>\n          <p><i tooltip=\"Grunt\" class=\"fab fa-grunt\"></i></p>\n          <p><i tooltip=\"Git\" class=\"fab fa-git\"></i></p>\n          <p><i tooltip=\"GitLab\" class=\"fab fa-gitlab\"></i></p>\n          <p><i tooltip=\"GitHub\" class=\"fab fa-github\"></i></p>\n          <p><i tooltip=\"Terminal\" class=\"fas fa-terminal\"></i></p>\n          <p><i tooltip=\"Jenkins\" class=\"fab fa-jenkins\"></i></p>\n        </div>\n        <!--<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\">Learn More!</button>-->\n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/skills/skills.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/modals/long-story-short/skills/skills.component.ts ***!
+  \********************************************************************/
+/*! exports provided: SkillsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkillsComponent", function() { return SkillsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SkillsComponent = /** @class */ (function () {
+    function SkillsComponent() {
+    }
+    SkillsComponent.prototype.ngOnInit = function () {
+    };
+    SkillsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-skills',
+            template: __webpack_require__(/*! ./skills.component.html */ "./src/app/modals/long-story-short/skills/skills.component.html"),
+            styles: [__webpack_require__(/*! ./skills.component.css */ "./src/app/modals/long-story-short/skills/skills.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SkillsComponent);
+    return SkillsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/work/work.component.css":
+/*!*****************************************************************!*\
+  !*** ./src/app/modals/long-story-short/work/work.component.css ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".card {\n     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n      transition: all 0.3s cubic-bezier(.25,.8,.25,1);\n      color: #6E757C;\n      margin-bottom: 25px;\n      border-radius: 0px;\n}\n\n.card-header {\n    background: #878E95;\n    color: #fff;\n}\n\n.marginBottom {\n    margin-bottom: 10px;\n}\n\n.innerCard {\n    box-shadow: none;\n}\n\n.fas-tag {\n    font-size: 45px;\n    color: #6E757C;\n    padding: 10px;\n}\n\n.card-title {\n    font-size: 32px;\n    color: #6E757C;\n    padding-bottom: 15px;\n}\n\nhr {\n    margin: 30px 0px;\n    padding: .1px 0;\n    background: #6F757B;\n}\n\n.bulletPoints {\n    padding: 5px 40px;\n}"
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/work/work.component.html":
+/*!******************************************************************!*\
+  !*** ./src/app/modals/long-story-short/work/work.component.html ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card\">\n    <div class=\"card-body\">\n        <div class=\"row\">\n            <div class=\"col-sm-1\">\n                <i class=\"fas fa-briefcase fas-tag\"></i>\n            </div>\n            <div class=\"col-sm-11\">\n                <h5 class=\"card-title\">Work Experience</h5>\n                <div class=\"innerCard\">\n                    <div class=\"marginBottom\">\n                        <h5><strong>Frontend Angular Developer</strong></h5> <strong class=\"highlightColor\"><i class=\"fas fa-at\"></i> Egen Solutions</strong>\n                    </div>\n                    <div class=\"marginBottom\">\n                        <p>\n                            <strong><i class=\"fas fa-caret-right\"></i> Description: </strong>Egen Solutions\n                            is an\n                            enterprise\n                            web and mobile application development firm dedicated to build better user experiences\n                            at\n                            the for front of design. Egen also has an IT Talent Acquisition division and places\n                            highly\n                            skilled tech professionals in companies across the US.\n                        </p>\n                    </div>\n                    <!--<div class=\"marginBottom\">\n                        <strong><i class=\"fas fa-caret-right\"></i> Responsibilities:</strong>\n                    </div>\n                    <div class=\"bulletPoints\">\n                        <ul>\n                            <li>Involved in various phases of Software Development Life Cycle (SDLC) as requirement\n                                gathering, data modeling, analysis, architecture design & development for the project in\n                                an Agile/Scrum Environment.\n                            </li>\n                            <li>Involved in designing use cases with the help of business analyst team and developed\n                                technical requirement documents.\n                            </li>\n                            <li>Design develop and test HTML5, CSS3, Bootstrap, JavaScript, jQuery and Angular 1.6 that\n                                meets accessibility and web browser standards.\n                            </li>\n                            <li>Designed single page applications with rich user interface using HTML5, CSS3, Bootstrap,\n                                JavaScript, Angular 1.4/1.6.\n                            </li>\n                            <li>Wrote Angular Unit Tests and created various Components, Custom Directives, Pipes,\n                                Template syntax and Routing.\n                            </li>\n                        </ul>\n                    </div>-->\n                    <p>\n                        <strong><i class=\"fas fa-caret-right\"></i> Environment: </strong>HTML5, CSS3, JavaScript,\n                        AngularJS 1.6, Ngx Bootstrap, AJAX, JSON, SASS, LESS, Node, npm, Agile, Jenkins, Genesis,\n                        Visual Studio Code, IntelliJ, Postman, Source Tree, GIT, TFS.\n                    </p>\n                </div>\n                <hr>\n                <div class=\"innerCard\">\n                    <div class=\"marginBottom\">\n                        <h5><strong>Application Developer</strong></h5> <strong class=\"highlightColor\"><i class=\"fas fa-at\"></i> Kent State University</strong>\n                    </div>\n                    <div class=\"marginBottom\">\n                        <p>\n                            <strong><i class=\"fas fa-caret-right\"></i> Description: </strong>Kent State University is a\n                            large, primary residential, public research university in Kent, Ohio. It has serval\n                            IT divisions which services on software solutions to the Organization.\n                        </p>\n                    </div>\n                    <!--<div class=\"marginBottom\">\n                        <strong><i class=\"fas fa-caret-right\"></i> Responsibilities:</strong>\n                    </div>\n                    <div class=\"bulletPoints\">\n                        <ul>\n                            <li>Involved in various phases of Software Development Life Cycle (SDLC) as requirement\n                                gathering, data modeling, analysis, architecture design & development for the project in\n                                an Agile/Scrum Environment.\n                            </li>\n                            <li>Involved in designing use cases with the help of business analyst team and developed\n                                technical requirement documents.\n                            </li>\n                            <li>Design develop and test HTML5, CSS3, Bootstrap, JavaScript, jQuery and Angular 1.6 that\n                                meets accessibility and web browser standards.\n                            </li>\n                            <li>Designed single page applications with rich user interface using HTML5, CSS3, Bootstrap,\n                                JavaScript, Angular 1.4/1.6.\n                            </li>\n                            <li>Wrote Angular Unit Tests and created various Components, Custom Directives, Pipes,\n                                Template syntax and Routing.\n                            </li>\n                        </ul>\n                    </div>-->\n                    <p>\n                        <strong><i class=\"fas fa-caret-right\"></i> Environment: </strong>Angular 2, Type Script,\n                        HTML4/5,\n                        CSS3/2, C#, ASP/ADO.NET 4.0, Bootstrap3, JavaScript, Responsive Web Design, AJAX, JSON, MS\n                        SQL Server 2008, Visual Studio 2017 and GitLab.\n                    </p>\n                </div>\n                <hr>\n                <div class=\"innerCard\">\n                    <div class=\"marginBottom\">\n                        <h5><strong>Frontend Developer</strong></h5> <strong class=\"highlightColor\"><i class=\"fas fa-at\"></i> Insas Technologies</strong>\n                    </div>\n                    <div class=\"marginBottom\">\n                        <p>\n                            <strong><i class=\"fas fa-caret-right\"></i> Description: </strong>Insas Technologies is one\n                            of the well-known start-up company focused on implementing large-scale IT projects for\n                            Retail and Education industry.\n                        </p>\n                    </div>\n                   <!-- <div class=\"marginBottom\">\n                        <strong><i class=\"fas fa-caret-right\"></i> Responsibilities:</strong>\n                    </div>\n                    <div class=\"bulletPoints\">\n                        <ul>\n                            <li>Involved in various phases of Software Development Life Cycle (SDLC) as requirement\n                                gathering, data modeling, analysis, architecture design & development for the project in\n                                an Agile/Scrum Environment.\n                            </li>\n                            <li>Involved in designing use cases with the help of business analyst team and developed\n                                technical requirement documents.\n                            </li>\n                            <li>Design develop and test HTML5, CSS3, Bootstrap, JavaScript, jQuery and Angular 1.6 that\n                                meets accessibility and web browser standards.\n                            </li>\n                            <li>Designed single page applications with rich user interface using HTML5, CSS3, Bootstrap,\n                                JavaScript, Angular 1.4/1.6.\n                            </li>\n                            <li>Wrote Angular Unit Tests and created various Components, Custom Directives, Pipes,\n                                Template syntax and Routing.\n                            </li>\n                        </ul>\n                    </div>-->\n                    <p>\n                        <strong><i class=\"fas fa-caret-right\"></i> Environment: </strong>HTML, CSS, AJAX, DHTML, JSON,\n                        HTML5, XML, DOM, Data visualization, JavaScript, MS Excel, jQuery, Bootstrap, AngularJS,\n                        Jasmine.\n                    </p>\n                </div>\n                <!--<button type=\"button\" class=\"btn btn-outline-secondary btn-sm\">Learn More!</button>-->\n            </div>\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/modals/long-story-short/work/work.component.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/modals/long-story-short/work/work.component.ts ***!
+  \****************************************************************/
+/*! exports provided: WorkComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WorkComponent", function() { return WorkComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var WorkComponent = /** @class */ (function () {
+    function WorkComponent() {
+    }
+    WorkComponent.prototype.ngOnInit = function () {
+    };
+    WorkComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-work',
+            template: __webpack_require__(/*! ./work.component.html */ "./src/app/modals/long-story-short/work/work.component.html"),
+            styles: [__webpack_require__(/*! ./work.component.css */ "./src/app/modals/long-story-short/work/work.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], WorkComponent);
+    return WorkComponent;
 }());
 
 

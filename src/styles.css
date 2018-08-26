@@ -40,10 +40,24 @@ body:before {
    box-shadow: none;
 }
 
+.highlightColor {
+    color: #82A1CC;
+}
+
 /* no outline for non-keyboard-inputs elements */
 button:focus,
 select:focus {
   outline: none;
+}
+
+/* Modal */
+.close {
+    opacity: 1;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
 }
 
 .modal-header {

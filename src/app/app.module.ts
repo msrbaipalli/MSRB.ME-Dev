@@ -18,6 +18,7 @@ import { EducationComponent } from './modals/long-story-short/education/educatio
 import { SkillsComponent } from './modals/long-story-short/skills/skills.component';
 import { InterestsComponent } from './modals/long-story-short/interests/interests.component';
 import { NavbarComponent } from './modals/long-story-short/navbar/navbar.component';
+import { CertificatesComponent } from './modals/long-story-short/certificates/certificates.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { NavbarComponent } from './modals/long-story-short/navbar/navbar.compone
     EducationComponent,
     SkillsComponent,
     InterestsComponent,
-    NavbarComponent
+    NavbarComponent,
+    CertificatesComponent
   ],
   imports: [
     BrowserModule,
