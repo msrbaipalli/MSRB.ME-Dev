@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { MaterialModule } from './shared/material.module';
 
 import { GistModule } from '@sgbj/angular-gist';
 import { AppComponent } from './app.component';
@@ -19,6 +20,9 @@ import { SkillsComponent } from './modals/long-story-short/skills/skills.compone
 import { InterestsComponent } from './modals/long-story-short/interests/interests.component';
 import { NavbarComponent } from './modals/long-story-short/navbar/navbar.component';
 import { CertificatesComponent } from './modals/long-story-short/certificates/certificates.component';
+import { StocksWatchComponent } from './projects/stocks-watch/stocks-watch.component';
+import { AppRoutingModule } from './app-routing.module';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
@@ -34,15 +38,19 @@ import { CertificatesComponent } from './modals/long-story-short/certificates/ce
     SkillsComponent,
     InterestsComponent,
     NavbarComponent,
-    CertificatesComponent
+    CertificatesComponent,
+    StocksWatchComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     GistModule,
     FormsModule,
     BsDropdownModule.forRoot(),
     ModalModule.forRoot(),
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
