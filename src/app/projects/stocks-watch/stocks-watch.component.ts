@@ -9,5 +9,13 @@ import {map, startWith} from 'rxjs/operators';
   styleUrls: ['./stocks-watch.component.css']
 })
 export class StocksWatchComponent implements OnInit {
+  boxes = [
+    {
+      title: 'Hi'
+    },
+    {
+      title: 'Boys!'
+    }
+  ];
   ngOnInit() {}
 }

@@ -5,8 +5,6 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { MaterialModule } from './shared/material.module';
-
-import { GistModule } from '@sgbj/angular-gist';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SearchMeComponent } from './search-me/search-me.component';
@@ -23,6 +21,8 @@ import { CertificatesComponent } from './modals/long-story-short/certificates/ce
 import { StocksWatchComponent } from './projects/stocks-watch/stocks-watch.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InfoComponent } from './info/info.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxGistModule } from 'ngx-gist/dist/ngx-gist.module';
 
 @NgModule({
   declarations: [
@@ -44,13 +44,14 @@ import { InfoComponent } from './info/info.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    GistModule,
     FormsModule,
     BsDropdownModule.forRoot(),
     ModalModule.forRoot(),
     TooltipModule.forRoot(),
-    MaterialModule
+    MaterialModule,
+    NgxGistModule
   ],
   providers: [],
   bootstrap: [AppComponent]
