@@ -34,6 +34,15 @@ hr {
     box-shadow: none;
 }
 
+.connect-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.connect-icons a {
+    padding-right: 20px;
+}
+
 .fas-tag {
     font-size: 25px;
     color: #F7F7F7;
@@ -60,4 +69,9 @@ hr {
 .emailId a:hover {
     color: #F7F7F7;
     text-decoration: none;
+}
+
+.lastHr {
+    margin-top: 10px !important;
+    margin-bottom: 20px;
 }
