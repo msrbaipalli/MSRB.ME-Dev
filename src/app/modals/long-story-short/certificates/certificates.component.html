@@ -7,19 +7,24 @@
       <div class="col-sm-11">
         <h5 class=" card-title">Certifications</h5>
         <div class="innerCard">
-          <div class="marginBottom">
-            <p>
-              <a href="https://courses.edx.org/certificates/cfdbf919a099417ab1ea259741291ac2" target="_blank"><strong><i class="fas fa-caret-right"></i> CS50 Introduction to Computer Science: </strong></a><i class="fas fa-at"></i> Harvard University (edX)
-            </p>
-            <p>
-              <a href="https://prod-cert-bucket.s3.amazonaws.com/downloads/2c9c3cc2083a47d79cc5a96a23498d7a/Statement.pdf" target="_blank"><strong><i class="fas fa-caret-right"></i> Computer Science 101: </strong></a><i class="fas fa-at"></i> Stanford University
-            </p>
-            <p>
-              <a href="https://www.freecodecamp.org/certification/bmsrinivasrao007/legacy-front-end" target="_blank"><strong><i class="fas fa-caret-right"></i> Front End Development: </strong></a><i class="fas fa-at"></i> Free Code Camp
-            </p>
+          <div class="marginBottom certificate-container">
+            <mat-card class="certificate-card" *ngFor="let certificate of certificateList">
+              <mat-card-header>
+                <div mat-card-avatar class="certificate-card-header-image"
+                  [ngStyle]="{'background-image': certificate.iconUrl}">
+                </div>
+                <mat-card-title>{{ certificate.title }}</mat-card-title>
+                <mat-card-subtitle>{{ certificate.provider }}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+              </mat-card-content>
+              <mat-card-actions>
+                <button (click)="onViewCertificateClick(certificate.certificateUrl)" class="certificate-button"
+                  mat-flat-button>View Certificate</button>
+              </mat-card-actions>
+            </mat-card>
           </div>
         </div>
-        <!--<button type="button" class="btn btn-outline-secondary btn-sm">Learn More!</button>-->
       </div>
     </div>
   </div>

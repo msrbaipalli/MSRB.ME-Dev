@@ -38,3 +38,44 @@ hr {
     padding: .1px 0;
     background: #6F757B;
 }
+
+.certificate-container .certificate-card {
+    display: inline-block;
+}
+
+.certificate-container mat-card-header {
+    height: 65px;
+}
+
+.certificate-container mat-card-title {
+    color: #111 ;
+    font-size: 16px;
+}
+
+.certificate-container mat-card-subtitle {
+    font-size: 14px;
+}
+
+.certificate-card {
+    box-shadow: 0 6px 16px 0 rgba(0,0,0,.2);
+    width: 300px;
+    padding-bottom: 20px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+
+.certificate-card-header-image {
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+}
+
+.certificate-button {
+    background: #fff;
+    border: 1px solid #036A78;
+    color: #036A78;
+    margin-left: 8px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 10px;
+}
