@@ -6,7 +6,7 @@ import { CERTIFICATE_LIST } from './certificates.constants';
 @Component({
   selector: 'app-certificates',
   templateUrl: './certificates.component.html',
-  styleUrls: ['./certificates.component.css']
+  styleUrls: ['./certificates.component.scss']
 })
 export class CertificatesComponent implements OnInit {
   certificateList = CERTIFICATE_LIST;

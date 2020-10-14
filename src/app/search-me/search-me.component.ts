@@ -6,7 +6,7 @@ import { SEARCH_ITEMS } from './search-me.constants';
 @Component({
   selector: 'app-search-me',
   templateUrl: './search-me.component.html',
-  styleUrls: ['./search-me.component.css']
+  styleUrls: ['./search-me.component.scss']
 })
 export class SearchMeComponent implements OnInit {
   isSearchItemFound: boolean;

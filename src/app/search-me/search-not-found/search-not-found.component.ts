@@ -5,7 +5,7 @@ import { SEARCH_HITNS } from '../search-me.constants';
 @Component({
   selector: 'search-not-found',
   templateUrl: './search-not-found.component.html',
-  styleUrls: ['./search-not-found.component.css']
+  styleUrls: ['./search-not-found.component.scss']
 })
 export class SearchNotFoundComponent implements OnInit {
   @Input() searchMeComponent: SearchMeComponent
