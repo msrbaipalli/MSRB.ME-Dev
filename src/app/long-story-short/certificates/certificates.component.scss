@@ -1,3 +1,5 @@
+@import 'src/app/shared/shared.scss';
+
 .card {
       color: #6E757C;
       margin-bottom: 25px;
@@ -73,8 +75,8 @@ hr {
 
 .certificate-button {
     background: #fff;
-    border: 1px solid #036A78;
-    color: #036A78;
+    border: 1px solid $theme-color;
+    color: $theme-color;
     margin-left: 8px;
     font-size: 12px;
     height: 30px;

@@ -1,4 +1,5 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import 'src/app/shared/shared.scss';
 
 * {
   margin: 0;
@@ -33,14 +34,14 @@ body {
 
 /* ICONS */
 .fa-icon p {
-    color: #036A78;
+    color: $theme-color;
     font-size: 50px;
     display: inline-block;
     margin-right: 20px;
 }
 
 .fa-icon p:hover {
-    color: #0C9CB4;
+    color: $theme-hover-color;
 }
 
 /* Opera */
@@ -58,7 +59,7 @@ body:before {
 }
 
 .highlightColor {
-    color: #036A78;
+    color: $theme-color;
 }
 
 /* no outline for non-keyboard-inputs elements */

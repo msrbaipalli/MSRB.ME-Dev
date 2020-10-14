@@ -1,3 +1,5 @@
+@import 'src/app/shared/shared.scss';
+
 .card {
       color: #F7F7F7;
       border-radius: 0px;
@@ -18,7 +20,7 @@ hr {
 }
 
 .cardBG {
-    background: #036A78;
+    background: $theme-color;
 }
 
 .myPic {

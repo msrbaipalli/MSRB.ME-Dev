@@ -1,4 +1,4 @@
-/* Styles for wrapping the search box */
+@import 'src/app/shared/shared.scss';
 
 .searchMe {
     width: 80%;
@@ -101,10 +101,10 @@
     width: 180px;
     border-color: #3C4647;
     border-radius: 0px 4px 4px 0px;
-    background: #026A77;
+    background: $theme-color;
     color: #EEF8F9;
 }
 
 .searchButton:hover {
-    background: #0C9CB4;
+    background: $theme-hover-color;
 }
