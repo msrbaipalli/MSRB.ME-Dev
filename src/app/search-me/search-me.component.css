@@ -16,7 +16,7 @@
 
 .searchMe-div .form-control-feedback {
     position: relative;
-    padding-left: 5px;
+    padding-left: 10px;
     z-index: 2;
     display: block;
     width: 35px;
@@ -44,7 +44,7 @@
     width: 35px;
     height: 38px;
     padding-top: 5px;
-    padding-left: 5px;
+    padding-left: 10px;
     border-radius: .25rem 0px 0px .25rem;
     background: #3C4647;
     color: #ACAFB1;
