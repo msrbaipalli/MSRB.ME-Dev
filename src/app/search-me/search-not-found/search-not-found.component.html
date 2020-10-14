@@ -1,0 +1,10 @@
+<div class="search-not-found-container">
+    <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Results not found!
+    <hr>
+    <mat-chip-list>
+        <span>Example search keywords:</span>
+        <mat-chip (click)="onHintClick(hint)" color="primary" selected *ngFor="let hint of searchHints">
+            {{ hint }}
+        </mat-chip>
+    </mat-chip-list>
+</div>

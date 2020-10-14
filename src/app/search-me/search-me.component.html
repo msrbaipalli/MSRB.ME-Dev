@@ -1,5 +1,4 @@
 <div class="searchMe">
-    <!-- Actual search box -->
     <div class="form-group input-group-prepend searchMe-div" dropdown>
         <span class="fa fa-search form-control-feedback input-group-append" *ngIf="!hasSearchValue()"></span>
         <button class="fa fa-times-circle search-clear-btn input-group-append" *ngIf="hasSearchValue()"
@@ -27,9 +26,7 @@
 
     <div class="form-group searchMeResult-div">
         <div class="searchItem" *ngIf="hasSearchValue()">
-            <div *ngIf="!hasResults()">
-                <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Results not found!
-            </div>
+            <search-not-found *ngIf="!hasResults()" [searchMeComponent]="this"></search-not-found>
             <app-work *ngIf="hasSearchMatch('work')"></app-work>
             <app-education *ngIf="hasSearchMatch('education')"></app-education>
             <app-skills *ngIf="hasSearchMatch('skills')"></app-skills>

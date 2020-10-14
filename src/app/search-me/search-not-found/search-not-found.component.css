@@ -1,0 +1,14 @@
+.search-not-found-container {
+    font-weight: 400;
+}
+
+.search-not-found-container mat-chip-list span {
+    font-size: 14px;
+}
+
+.search-not-found-container mat-chip {
+    cursor: pointer;
+    font-size: 12px;
+    color: #fff;
+    background-color: #026A78;
+}

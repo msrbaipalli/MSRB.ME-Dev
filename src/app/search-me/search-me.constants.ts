@@ -29,6 +29,7 @@ export const SEARCH_ITEMS = {
         skills
     ],
     certificates: [
+        'Certifications',
         'certificates',
         'certificate',
         'edx HardwardX',
@@ -49,3 +50,5 @@ export const SEARCH_ITEMS = {
         'Exploring'
     ]
 }
+
+export const SEARCH_HITNS = ['Work Experience', 'Education', 'Skills', 'Certifications', 'Interests']

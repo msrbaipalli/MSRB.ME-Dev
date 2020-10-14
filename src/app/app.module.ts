@@ -10,12 +10,12 @@ import { InfoComponent } from './info/info.component';
 import { NgxGistModule } from 'ngx-gist/dist/ngx-gist.module';
 import { SharedModule } from './shared/shared.module';
 import { LongStoryShortModule } from './long-story-short/long-story-short.module';
+import { SearchMeModule } from './search-me/search-me.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SearchMeComponent,
     IntroductionComponent,
     FooterComponent,
     StocksWatchComponent,
@@ -24,6 +24,7 @@ import { LongStoryShortModule } from './long-story-short/long-story-short.module
   imports: [
     AppRoutingModule,
     LongStoryShortModule,
+    SearchMeModule,
     SharedModule,
     NgxGistModule
   ],
