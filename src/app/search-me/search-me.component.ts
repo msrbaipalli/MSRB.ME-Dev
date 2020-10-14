@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { BsModalService } from 'ngx-bootstrap/modal';
-import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { isNullOrUndefined } from '../shared/utils/utils.service';
+import { SEARCH_ITEMS } from './search-me.constants';
 
 @Component({
   selector: 'app-search-me',
@@ -8,37 +9,55 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
   styleUrls: ['./search-me.component.css']
 })
 export class SearchMeComponent implements OnInit {
-  searchFocus;
-  modalRef;
-  items = [];
-  myItems = ['About','Experience','Contact'];
+  isSearchItemFound: boolean;
+  searchValue: string;
+  modalRef: BsModalRef;
 
-  constructor(private modalService: BsModalService) {
-  }
+  constructor(private modalService: BsModalService) { }
 
   ngOnInit() {
+    this._reset();
   }
 
-  search(item) {
-    this.items = [];
-    if (item !== "") {
-      this.searchFocus = true;
+  hasSearchMatch(key: string): boolean {
+    const items = key && SEARCH_ITEMS[key];
+
+    if (isNullOrUndefined(items)) {
+      return false;
     }
-    else {
-      this.searchFocus = false;
-    }
 
-    return this.items;
+    return items.some((item: string) =>
+      item.toLowerCase().includes(this.searchValue.toLowerCase())
+    );
   }
 
-  searchButton(item) {
-    this.searchFocus = true;
-    this.items = [{title:'About Me!'},{title:'Contact'}];
-    return this.items;
+  hasResults(): boolean {
+    return Object.keys(SEARCH_ITEMS).some(key => this.hasSearchMatch(key));
   }
 
-  openModal(template) {
-    this.searchFocus = false;
+  hasSearchValue(): boolean {
+    return this.searchValue !== '';
+  }
+
+  openModal(template: any): void {
+    this._reset();
     this.modalRef = this.modalService.show(template);
+  }
+
+  onSearchFocusout(): void {
+    // this._reset();
+  }
+
+  onSearchClear(): void {
+    this._reset();
+  }
+
+  private _reset(): void {
+    this.searchValue = '';
+    this.isSearchItemFound = false;
+  }
+
+  private _setSearchItemFound(flag: boolean): void {
+    this.isSearchItemFound = flag;
   }
 }
