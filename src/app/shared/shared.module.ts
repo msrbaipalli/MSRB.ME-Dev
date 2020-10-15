@@ -6,8 +6,12 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { MaterialModule } from './material.module';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+
+const components = [LoadingSpinnerComponent]
 
 @NgModule({
+    declarations: [components],
     exports: [
         BrowserModule,
         BrowserAnimationsModule,
@@ -15,7 +19,8 @@ import { MaterialModule } from './material.module';
         MaterialModule,
         TooltipModule,
         BsDropdownModule,
-        ModalModule
+        ModalModule,
+        components
     ],
     imports: [
         TooltipModule.forRoot(),

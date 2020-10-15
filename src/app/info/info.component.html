@@ -1,9 +1,10 @@
 <div id="wrap">
-  <div id="container">
+  <div id="container" *ngIf="!showLoading">
     <app-search-me></app-search-me>
     <app-home></app-home>
   </div>
+  <loading-spinner *ngIf="showLoading"></loading-spinner>
 </div>
-<div id="footer">
+<div id="footer" *ngIf="!showLoading">
   <app-footer></app-footer>
 </div>

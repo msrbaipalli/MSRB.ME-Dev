@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./info.component.scss']
 })
 export class InfoComponent implements OnInit {
+  showLoading: boolean;
 
   constructor() { }
 
   ngOnInit() {
+    this.showLoading = true;
+    setTimeout(() => { this.showLoading = false; }, 1500)
   }
 
 }
