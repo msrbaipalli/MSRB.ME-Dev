@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { isNullOrUndefined } from '../shared/utils/utils.service';
+import { isEmptyString, isNullOrUndefined } from '../shared/utils/utils.service';
 import { SEARCH_ITEMS } from './search-me.constants';
 
 @Component({
@@ -21,13 +21,14 @@ export class SearchMeComponent implements OnInit {
 
   hasSearchMatch(key: string): boolean {
     const items = key && SEARCH_ITEMS[key];
+    const searchValue = this.searchValue ? this.searchValue.trim().toLowerCase() : '';
 
-    if (isNullOrUndefined(items)) {
+    if (isNullOrUndefined(items) || isEmptyString(searchValue)) {
       return false;
     }
 
     return items.some((item: string) =>
-      item.toLowerCase().includes(this.searchValue.toLowerCase())
+      item.toLowerCase().includes(searchValue)
     );
   }
 
@@ -44,9 +45,7 @@ export class SearchMeComponent implements OnInit {
     this.modalRef = this.modalService.show(template);
   }
 
-  onSearchFocusout(): void {
-    // this._reset();
-  }
+  onSearchFocusout(): void { }
 
   onSearchClear(): void {
     this._reset();
@@ -55,9 +54,5 @@ export class SearchMeComponent implements OnInit {
   private _reset(): void {
     this.searchValue = '';
     this.isSearchItemFound = false;
-  }
-
-  private _setSearchItemFound(flag: boolean): void {
-    this.isSearchItemFound = flag;
   }
 }

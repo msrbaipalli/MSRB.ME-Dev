@@ -1,7 +1,15 @@
+@import 'src/app/shared/shared.scss';
+
 .card {
       color: #6E757C;
       margin-bottom: 25px;
       border-radius: 0px;
+
+      .card-title {
+        color: #3C4647;
+        font-size: 32px;
+        padding-bottom: 15px;
+      }
 }
 
 .card-header {
@@ -19,22 +27,78 @@
 
 .fas-tag {
     font-size: 45px;
-    color: #6E757C;
+    color: #3C4647;
     padding: 10px;
 }
 
-.card-title {
-    font-size: 32px;
-    color: #6E757C;
-    padding-bottom: 15px;
+.innerCard {
+    box-shadow: none;
+
+    .universityTitle {
+        color: $theme-color;
+        font-weight: 600;
+    }
+
+    .client-header {
+        mat-card-subtitle {
+            border-bottom: 1px solid $theme-color;
+        }
+    }
+
+    mat-card {
+        border-radius: 0;
+        border-left: 2px dotted $theme-color;
+        margin: 15px 0;
+        padding: 16px 0px;
+    }
+
+    mat-card-title {
+        color: #111 ;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    mat-card-subtitle {
+        font-size: 14px;
+        
+        div {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+
+    mat-card-content {
+        margin-left: 60px;
+
+        p {
+            margin-bottom: 6px;
+            
+            span {
+                text-transform: capitalize;
+                color: #3C4647;
+            }
+        }
+
+        .client-card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            display: inline-block;
+            margin-right: 15px;
+            width: 450px;
+            max-width: 100%;
+            border: 0;
+        }
+    }
 }
 
-hr {
-    margin: 30px 0px;
-    padding: .1px 0;
-    background: #6F757B;
+.card-header-image {
+    margin-left: 10px;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
 }
 
-.bulletPoints {
-    padding: 10px 40px;
+.universityTitle:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }

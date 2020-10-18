@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import 'src/app/shared/shared.scss';
 
 .title p {
   font-size: 50px;
@@ -21,10 +22,16 @@
   letter-spacing: .14em;
 }
 
-.tagLine p {
-  font-size: 20px;
-  color: #BABBBD;
-  line-height: 1.15em;
+.tagLine {
+  p {
+    font-size: 20px;
+    color: #BABBBD;
+    line-height: 1.15em;
+  }
+
+  span {
+    color: $white;
+  }
 }
 
 .emailId, .searchMore {

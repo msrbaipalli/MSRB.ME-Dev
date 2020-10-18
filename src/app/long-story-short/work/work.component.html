@@ -6,128 +6,50 @@
             </div>
             <div class="col-sm-11">
                 <h5 class="card-title">Work Experience</h5>
-                <div class="innerCard">
-                    <div class="marginBottom">
-                        <h5><strong>Software Developer</strong></h5> <strong class="highlightColor"><i class="fas fa-at"></i> Egen Solutions</strong>
-                    </div>
-                    <div class="marginBottom">
-                        <p>
-                            <strong><i class="fas fa-caret-right"></i> Description: </strong>Egen Solutions
-                            is an
-                            enterprise
-                            web and mobile application development firm dedicated to build better user experiences
-                            at
-                            the for front of design. Egen also has an IT Talent Acquisition division and places
-                            highly
-                            skilled tech professionals in companies across the US.
-                        </p>
-                    </div>
-                    <!--<div class="marginBottom">
-                        <strong><i class="fas fa-caret-right"></i> Responsibilities:</strong>
-                    </div>
-                    <div class="bulletPoints">
-                        <ul>
-                            <li>Involved in various phases of Software Development Life Cycle (SDLC) as requirement
-                                gathering, data modeling, analysis, architecture design & development for the project in
-                                an Agile/Scrum Environment.
-                            </li>
-                            <li>Involved in designing use cases with the help of business analyst team and developed
-                                technical requirement documents.
-                            </li>
-                            <li>Design develop and test HTML5, CSS3, Bootstrap, JavaScript, jQuery and Angular 1.6 that
-                                meets accessibility and web browser standards.
-                            </li>
-                            <li>Designed single page applications with rich user interface using HTML5, CSS3, Bootstrap,
-                                JavaScript, Angular 1.4/1.6.
-                            </li>
-                            <li>Wrote Angular Unit Tests and created various Components, Custom Directives, Pipes,
-                                Template syntax and Routing.
-                            </li>
-                        </ul>
-                    </div>-->
-                    <p>
-                        <strong><i class="fas fa-caret-right"></i> Environment: </strong>HTML5, CSS3, JavaScript, AngularJS 1.6 and 8, Angular Material, Ngx Bootstrap, AJAX, JSON, SASS, LESS, Node, npm, Agile, Jenkins, Genesis, Visual Studio Code, IntelliJ, Postman, Source Tree, GIT, TFS.
-                    </p>
+                <div class="innerCard" *ngFor="let workExperience of workExperiences">
+                    <mat-card>
+                        <mat-card-header>
+                            <div mat-card-avatar class="work-card-header-image"
+                                [ngStyle]="{'background-image': workExperience.companyIcon}">
+                            </div>
+                            <mat-card-title> {{ workExperience.role }} </mat-card-title>
+                            <mat-card-subtitle>
+                                <div class="companyTitle" (click)="onCompanyTitleClick(workExperience.companyUrl)">
+                                    {{ workExperience.company }}
+                                </div>
+                                <div class="companyDate">
+                                    {{ getClientDate(workExperience) }}
+                                </div>
+                            </mat-card-subtitle>
+                            <mat-card-subtitle>{{ workExperience.location }}</mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <mat-card class="client-card" *ngFor="let client of workExperience.clients">
+                                <mat-card-header class="client-header">
+                                    <mat-card-subtitle> CLIENT </mat-card-subtitle>
+                                </mat-card-header>
+                                <mat-card-header>
+                                    <div mat-card-avatar class="work-card-header-image"
+                                        [ngStyle]="{'background-image': client.companyIcon}">
+                                    </div>
+                                    <mat-card-title class="companyTitle"
+                                        (click)="onCompanyTitleClick(client.companyUrl)">
+                                        {{ client.company  }} </mat-card-title>
+                                    <mat-card-subtitle> {{ getClientDate(client) }}
+                                    </mat-card-subtitle>
+                                    <mat-card-subtitle>{{ client.location }}</mat-card-subtitle>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p><span>Project</span>: {{ client.project }}</p>
+                                    <p><span>Role</span>: {{ client.role }}</p>
+                                </mat-card-content>
+                            </mat-card>
+                            <p *ngIf="workExperience.project"><span>Project</span>: {{ workExperience.project }} </p>
+                            <p><span>Description</span>: {{ workExperience.companyDescription }} </p>
+                            <p><span>Environment</span>: {{ workExperience.environment }} </p>
+                        </mat-card-content>
+                    </mat-card>
                 </div>
-                <hr>
-                <div class="innerCard">
-                    <div class="marginBottom">
-                        <h5><strong>Application Developer</strong></h5> <strong class="highlightColor"><i class="fas fa-at"></i> Kent State University</strong>
-                    </div>
-                    <div class="marginBottom">
-                        <p>
-                            <strong><i class="fas fa-caret-right"></i> Description: </strong>Kent State University is a
-                            large, primary residential, public research university in Kent, Ohio. It has serval
-                            IT divisions which services on software solutions to the Organization.
-                        </p>
-                    </div>
-                    <!--<div class="marginBottom">
-                        <strong><i class="fas fa-caret-right"></i> Responsibilities:</strong>
-                    </div>
-                    <div class="bulletPoints">
-                        <ul>
-                            <li>Involved in various phases of Software Development Life Cycle (SDLC) as requirement
-                                gathering, data modeling, analysis, architecture design & development for the project in
-                                an Agile/Scrum Environment.
-                            </li>
-                            <li>Involved in designing use cases with the help of business analyst team and developed
-                                technical requirement documents.
-                            </li>
-                            <li>Design develop and test HTML5, CSS3, Bootstrap, JavaScript, jQuery and Angular 1.6 that
-                                meets accessibility and web browser standards.
-                            </li>
-                            <li>Designed single page applications with rich user interface using HTML5, CSS3, Bootstrap,
-                                JavaScript, Angular 1.4/1.6.
-                            </li>
-                            <li>Wrote Angular Unit Tests and created various Components, Custom Directives, Pipes,
-                                Template syntax and Routing.
-                            </li>
-                        </ul>
-                    </div>-->
-                    <p>
-                        <strong><i class="fas fa-caret-right"></i> Environment: </strong>Angular 2, Type Script, HTML4/5, CSS3/2, C#, ASP/ADO.NET 4.0, Bootstrap3, JavaScript, Responsive Web Design, AJAX, JSON, MS SQL Server 2008, Visual Studio 2017 and GitLab.
-                    </p>
-                </div>
-                <hr>
-                <div class="innerCard">
-                    <div class="marginBottom">
-                        <h5><strong>Application Developer</strong></h5> <strong class="highlightColor"><i class="fas fa-at"></i> Insas Technologies</strong>
-                    </div>
-                    <div class="marginBottom">
-                        <p>
-                            <strong><i class="fas fa-caret-right"></i> Description: </strong>Insas Technologies is one
-                            of the well-known start-up company focused on implementing large-scale IT projects for
-                            Retail and Education industry.
-                        </p>
-                    </div>
-                   <!-- <div class="marginBottom">
-                        <strong><i class="fas fa-caret-right"></i> Responsibilities:</strong>
-                    </div>
-                    <div class="bulletPoints">
-                        <ul>
-                            <li>Involved in various phases of Software Development Life Cycle (SDLC) as requirement
-                                gathering, data modeling, analysis, architecture design & development for the project in
-                                an Agile/Scrum Environment.
-                            </li>
-                            <li>Involved in designing use cases with the help of business analyst team and developed
-                                technical requirement documents.
-                            </li>
-                            <li>Design develop and test HTML5, CSS3, Bootstrap, JavaScript, jQuery and Angular 1.6 that
-                                meets accessibility and web browser standards.
-                            </li>
-                            <li>Designed single page applications with rich user interface using HTML5, CSS3, Bootstrap,
-                                JavaScript, Angular 1.4/1.6.
-                            </li>
-                            <li>Wrote Angular Unit Tests and created various Components, Custom Directives, Pipes,
-                                Template syntax and Routing.
-                            </li>
-                        </ul>
-                    </div>-->
-                    <p>
-                        <strong><i class="fas fa-caret-right"></i> Environment: </strong>HTML, CSS, AJAX, DHTML, JSON, HTML5, XML, DOM, Data visualization, JavaScript, MS Excel, jQuery, Bootstrap, AngularJS, Jasmine.
-                    </p>
-                </div>
-                <!--<button type="button" class="btn btn-outline-secondary btn-sm">Learn More!</button>-->
             </div>
         </div>
     </div>

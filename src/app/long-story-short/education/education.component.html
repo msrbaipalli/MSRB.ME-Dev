@@ -6,56 +6,27 @@
             </div>
             <div class="col-sm-11">
                 <h5 class=" card-title">Education</h5>
-                <div class="innerCard">
-                    <div class="marginBottom">
-                        <h5><strong>Master of Digital Sciences</strong></h5> <strong class="highlightColor"><i class="fas fa-at"></i> Kent State University</strong>
-                    </div>
-                    <div class="marginBottom">
-                        <p>
-                            <strong><i class="fas fa-caret-right"></i> Major: </strong>Computer and Information Sciences
-                        </p>
-                    </div>
-                    <div class="marginBottom">
-                        <p>
-                            <strong><i class="fas fa-caret-right"></i> GPA: </strong>3.7/4.0
-                        </p>
-                    </div>
-                    <div class="marginBottom">
-                        <p>
-                            <strong><i class="fas fa-caret-right"></i> Significant Courses: </strong>Algorithm and
-                            Programming with Data Structures, Enterprise Architecture, Database Management Systems,
-                            Application & Technology Architecture, Requirements & Engineering, and VB Programming.
-                        </p>
-                    </div>
+                <div class="innerCard" *ngFor="let education of educationList">
+                    <mat-card>
+                        <mat-card-header>
+                            <div mat-card-avatar class="card-header-image"
+                                [ngStyle]="{'background-image': education.universityIcon}">
+                            </div>
+                            <mat-card-title> {{ education.course }} </mat-card-title>
+                            <mat-card-subtitle>
+                                <div class="universityTitle" (click)="onCompanyTitleClick(education.universityUrl)">
+                                    {{ education.university }}
+                                </div>
+                                <div> {{ getClientDate(education) }} </div>
+                            </mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p><span>Major</span>: {{ education.major }} </p>
+                            <p><span>GPA</span>: {{ education.gpa }} </p>
+                            <p><span>Significant Courses</span>: {{ education.significantCourses }} </p>
+                        </mat-card-content>
+                    </mat-card>
                 </div>
-                <hr>
-                <div class="innerCard">
-                    <div class="marginBottom">
-                        <h5><strong>Bachelor of Technology</strong></h5> <strong class="highlightColor"><i class="fas fa-at"></i> Jawaharlal Nehru Technology
-                        University</strong>
-                    </div>
-                    <div class="marginBottom">
-                        <p>
-                            <strong><i class="fas fa-caret-right"></i> Major: </strong>Computer Science and Engineering
-                        </p>
-                    </div>
-                    <div class="marginBottom">
-                        <p>
-                            <strong><i class="fas fa-caret-right"></i> GPA: </strong>3.2/4.0
-                        </p>
-                    </div>
-                    <div class="marginBottom">
-                        <p>
-                            <strong><i class="fas fa-caret-right"></i> Significant Courses: </strong>Computer
-                            Programming
-                            &amp; Data Structures, Data Communications &amp; Computer Networks, Data Structure
-                            through C++, Data Warehouse &amp; Data Mining, Database Management Systems, Object
-                            Oriented Analysis &amp; Design, Design Patterns, Design &amp; Analysis of Algorithms and
-                            Formal Languages &amp; Automata Theory.
-                        </p>
-                    </div>
-                </div>
-                <!--<button type="button" class="btn btn-outline-secondary btn-sm">Learn More!</button>-->
             </div>
         </div>
     </div>

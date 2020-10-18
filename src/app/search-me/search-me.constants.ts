@@ -19,7 +19,9 @@ export const SEARCH_ITEMS = {
         'bachelor of technology',
         'computer science and engineering',
         'kent state university',
-        'jawaharlal nehru technology university'
+        'jawaharlal nehru technology university',
+        'Algorithm and Programming with Data Structures, Enterprise Architecture, Database Management Systems, Application & Technology Architecture, Requirements & Engineering, and VB Programming',
+        'Computer Programming & Data Structures, Data Communications & Computer Networks, Data Structure through C++, Data Warehouse & Data Mining, Database Management Systems, Object Oriented Analysis & Design, Design Patterns, Design & Analysis of Algorithms and Formal Languages & Automata Theory.'
     ],
     skills: [
         'skills',

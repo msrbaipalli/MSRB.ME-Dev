@@ -2,6 +2,12 @@
       color: #6E757C;
       margin-bottom: 25px;
       border-radius: 0px;
+
+      .card-title {
+        color: #3C4647;
+        font-size: 32px;
+        padding-bottom: 15px;
+      }
 }
 
 .card-header {
@@ -15,12 +21,6 @@
 
 .fas-tag {
     font-size: 45px;
-    color: #6E757C;
+    color: #3C4647;
     padding: 10px;
-}
-
-.card-title {
-    font-size: 32px;
-    color: #6E757C;
-    padding-bottom: 15px;
 }
