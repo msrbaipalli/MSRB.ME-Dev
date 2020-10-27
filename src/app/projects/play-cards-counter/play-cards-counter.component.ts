@@ -59,7 +59,7 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
   }
 
   addScore(): void {
-    if (this._areScoresZeroOrNotDefined() || !this._arePlayersAndScoresEqual()) {
+    if (!this._areScoresValid() || !this._arePlayersAndScoresEqual()) {
       this._dialog.open(DialogComponent, {
         data: {
           title: ERROR,
@@ -69,20 +69,18 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
       return;
     }
 
-    Object.keys(this.scoreInputs).forEach(playerName => {
-      const playerDetails = this.players.find(item => item.name === playerName);
-      const playerScore = this.scoreInputs[playerName];
+    if (!(Object.values(this.scoreInputs).every(value => value === 0))) {
+      this._addScoresHandler();
+      return;
+    }
 
-      if (!playerDetails || isNullOrUndefined(playerScore)) {
-        return;
+    this._dialog.open(DialogComponent, {
+      data: {
+        title: ARE_YOU_SURE,
+        message: 'Do you want to add 0 score to all the players?',
+        confirmCallback: () => { this._addScoresHandler() }
       }
-
-      playerDetails.scores.push(playerScore);
-      this.scoreInputs[playerName] = 0;
     });
-
-    this._sortPlayers();
-    this._storeOnLocalStorage();
   }
 
   hasScores(player: IPlayer): boolean {
@@ -125,7 +123,7 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
 
   resetScores(showDialog = true): void {
     if (!showDialog) {
-      this._resetScores();
+      this._resetScoresHandler();
       return;
     }
 
@@ -133,7 +131,7 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
       data: {
         title: ARE_YOU_SURE,
         message: 'This action will reset scores for all the players!',
-        confirmCallback: () => { this._resetScores() }
+        confirmCallback: () => { this._resetScoresHandler() }
       }
     });
   }
@@ -143,7 +141,7 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
       data: {
         title: ARE_YOU_SURE,
         message: 'This action will reset all the players!',
-        confirmCallback: () => { this._resetPlayers() }
+        confirmCallback: () => { this._resetPlayersHandler() }
       }
     });
   }
@@ -152,14 +150,14 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
     this._dialog.open(DialogComponent, {
       data: {
         title: ARE_YOU_SURE,
-        message: `This action will remove <b>${name}</b> player!`,
-        confirmCallback: () => { this._removePlayer(name) }
+        message: `This action will remove player <b>${name}</b>!`,
+        confirmCallback: () => { this._removePlayerHandler(name) }
       }
     });
   }
 
-  private _areScoresZeroOrNotDefined(): boolean {
-    return Object.values(this.scoreInputs).every(value => isNullOrUndefined(value) || value === 0);
+  private _areScoresValid(): boolean {
+    return !Object.values(this.scoreInputs).some((value: any) => isNullOrUndefined(value) || isNaN(value));
   }
 
   private _playerExists(): boolean {
@@ -196,19 +194,19 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
     return this.storage.get(this.STORAGE_KEY) || []
   }
 
-  private _resetPlayers(): void {
+  private _resetPlayersHandler(): void {
     this.players = [];
     this._storeOnLocalStorage();
   }
 
-  private _resetScores(): void {
+  private _resetScoresHandler(): void {
     this.players.forEach(player => {
       player.scores = [];
     });
     this._storeOnLocalStorage();
   }
 
-  private _removePlayer(name: string): void {
+  private _removePlayerHandler(name: string): void {
     this.players = this.players.filter(player => player.name !== name);
     this.scoreInputs = Object.keys(this.scoreInputs).reduce((result, player) => {
       if (player === name) {
@@ -218,6 +216,23 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
       result[player] = this.scoreInputs[player];
       return result;
     }, {});
+
+    this._sortPlayers(this.totalHeaderArrowDown);
+    this._storeOnLocalStorage();
+  }
+
+  private _addScoresHandler(): void {
+    Object.keys(this.scoreInputs).forEach(playerName => {
+      const playerDetails = this.players.find(item => item.name === playerName);
+      const playerScore = this.scoreInputs[playerName];
+
+      if (!playerDetails || isNullOrUndefined(playerScore)) {
+        return;
+      }
+
+      playerDetails.scores.push(playerScore);
+      this.scoreInputs[playerName] = 0;
+    });
 
     this._sortPlayers(this.totalHeaderArrowDown);
     this._storeOnLocalStorage();
