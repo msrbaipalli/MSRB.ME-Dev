@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { isEmptyString, isNullOrUndefined } from 'src/app/shared/utils/utils.service';
 import { IPlayer } from './play-cards-counter.interfaces';
@@ -6,18 +6,22 @@ import { ScoresDialogComponent } from './scores-dialog/scores-dialog.component';
 import { LOCAL_STORAGE, StorageService } from 'ngx-webstorage-service';
 import { DialogComponent } from 'src/app/shared/dialog/dialog.component';
 import { ARE_YOU_SURE, ERROR } from './play-cards-counter.constants';
+import { EditPlayerDialogComponent } from './edit-player-dialog/edit-player-dialog.component';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-play-cards-counter',
   templateUrl: './play-cards-counter.component.html',
   styleUrls: ['./play-cards-counter.component.scss']
 })
-export class PlayCardsCounterComponent implements OnInit {
+export class PlayCardsCounterComponent implements OnInit, OnDestroy {
   playerName: string = '';
   players: IPlayer[] = [];
   scoreInputs = {};
   totalHeaderArrowDown = true;
   STORAGE_KEY: string;
+
+  private _subscriptions: Subscription[] = [];
 
   constructor(
     @Inject(LOCAL_STORAGE) private storage: StorageService,
@@ -28,6 +32,10 @@ export class PlayCardsCounterComponent implements OnInit {
     this.STORAGE_KEY = this.constructor.name;
     this.players = this._getDataFromLocalStorage();
     this._sortPlayers();
+  }
+
+  ngOnDestroy() {
+    this._subscriptions.forEach(subscription => subscription.unsubscribe());
   }
 
   addPlayer(): void {
@@ -47,7 +55,6 @@ export class PlayCardsCounterComponent implements OnInit {
     });
 
     this.playerName = '';
-    this.resetScores(false);
     this._storeOnLocalStorage();
   }
 
@@ -91,6 +98,19 @@ export class PlayCardsCounterComponent implements OnInit {
     this.totalHeaderArrowDown = !this.totalHeaderArrowDown;
     this._sortPlayers(this.totalHeaderArrowDown);
     this._storeOnLocalStorage();
+  }
+
+  onPlayerClick(player: IPlayer): void {
+    let dialogRef = this._dialog.open(EditPlayerDialogComponent, {
+      data: {
+        player: player,
+        totalScore: this._getTotalCount(player)
+      }
+    });
+
+    this._subscriptions.push(
+      dialogRef.afterClosed().subscribe(() => { this._storeOnLocalStorage(); })
+    );
   }
 
   openScoresDialog(player: IPlayer): void {

@@ -2,16 +2,11 @@
     <div class="input-group">
         <input (keyup.enter)="addPlayer()" type="text" class="form-control" placeholder="Enter Player Name!"
             [(ngModel)]="playerName">
-        <button class="add-button" color="primary" mat-raised-button (click)="addPlayer()"> Add Player </button>
+        <button class="add-button" color="primary" mat-raised-button (click)="addPlayer()">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
     </div>
 
-    <div class="action-buttons">
-        <button [disabled]="players.length === 0" color="warn" mat-raised-button (click)="resetScores()"> Reset Scores
-        </button>
-        <button [disabled]="players.length === 0" class="reset-players" color="warn" mat-raised-button
-            (click)="resetPlayers()"> Reset Players
-        </button>
-    </div>
     <table class="table">
         <thead>
             <tr>
@@ -20,13 +15,18 @@
                     <i class="fa"
                         [ngClass]="{'fa-angle-down': totalHeaderArrowDown, 'fa-angle-up': !totalHeaderArrowDown}"></i>
                 </th>
-                <th></th>
-                <th></th>
+                <th>
+                </th>
+                <th>
+                </th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let player of players; index as playerIndex">
-                <td class="player-name"> {{ player.name }} </td>
+                <td class="player-name">
+                    <button mat-stroked-button color="primary"
+                        (click)="onPlayerClick(player)">{{ player.name }}</button>
+                </td>
                 <td class="player-total-score">
                     <button mat-stroked-button color="primary"
                         (click)="openScoresDialog(player)">{{ getPlayerTotalScore(player) }}</button>
@@ -38,7 +38,7 @@
                     </div>
                 </td>
                 <td>
-                    <button mat-mini-fab color="warn" (click)="removePlayer(player)">
+                    <button mat-icon-button color="warn" (click)="removePlayer(player)">
                         <i class="fa fa-minus-circle" aria-hidden="true"></i>
                     </button>
                 </td>
@@ -47,8 +47,16 @@
     </table>
 </div>
 <div class="footer">
-    <button [disabled]="players.length === 0" color="primary" class="add-score-btn" mat-raised-button
-        (click)="addScore()">
-        Add Score
-    </button>
+    <div class="action-buttons">
+        <button [disabled]="players.length === 0" color="warn" mat-raised-button (click)="resetScores()">
+            <i class="fa fa-refresh" aria-hidden="true"></i> Scores
+        </button>
+        <button [disabled]="players.length === 0" color="primary" class="add-score-btn" mat-raised-button
+            (click)="addScore()">
+            <i class="fa fa-plus" aria-hidden="true"></i> Score
+        </button>
+        <button [disabled]="players.length === 0" class="reset-players" color="warn" mat-raised-button
+            (click)="resetPlayers()"> <i class="fa fa-refresh" aria-hidden="true"></i> Players
+        </button>
+    </div>
 </div>

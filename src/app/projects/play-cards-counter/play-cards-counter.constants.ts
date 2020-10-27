@@ -1,2 +1,2 @@
-export const ARE_YOU_SURE = 'Are You Sure?';
+export const ARE_YOU_SURE = 'Are you sure?';
 export const ERROR = 'Error!';

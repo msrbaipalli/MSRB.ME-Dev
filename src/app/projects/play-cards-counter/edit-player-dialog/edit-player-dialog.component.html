@@ -1,0 +1,14 @@
+<h1 mat-dialog-title></h1>
+
+<div mat-dialog-content>
+    <mat-form-field class="example-full-width">
+        <mat-label>Edit player name!</mat-label>
+        <input matInput [(ngModel)]="playerName">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-flat-button color="primary" [mat-dialog-close]="player" cdkFocusInitial>Cancel</button>
+    <button (click)="onSubmit()" [disabled]="isSubmitDisabled()" mat-flat-button color="primary"
+        [mat-dialog-close]="player" cdkFocusInitial>Submit</button>
+</div>
