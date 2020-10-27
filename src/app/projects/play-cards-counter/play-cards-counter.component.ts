@@ -4,8 +4,8 @@ import { isEmptyString, isNullOrUndefined } from 'src/app/shared/utils/utils.ser
 import { IPlayer } from './play-cards-counter.interfaces';
 import { ScoresDialogComponent } from './scores-dialog/scores-dialog.component';
 import { LOCAL_STORAGE, StorageService } from 'ngx-webstorage-service';
-
-const ELEMENT_DATA: any[] = [];
+import { DialogComponent } from 'src/app/shared/dialog/dialog.component';
+import { ARE_YOU_SURE, ERROR } from './play-cards-counter.constants';
 
 @Component({
   selector: 'app-play-cards-counter',
@@ -17,7 +17,7 @@ export class PlayCardsCounterComponent implements OnInit {
   players: IPlayer[] = [];
   scoreInputs = {};
   totalHeaderArrowDown = true;
-  STORAGE_KEY = 'msrb_counter_app_players';
+  STORAGE_KEY: string;
 
   constructor(
     @Inject(LOCAL_STORAGE) private storage: StorageService,
@@ -25,12 +25,19 @@ export class PlayCardsCounterComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.STORAGE_KEY = this.constructor.name;
     this.players = this._getDataFromLocalStorage();
     this._sortPlayers();
   }
 
   addPlayer(): void {
     if (isNullOrUndefined(this.playerName) || isEmptyString(this.playerName) || this._playerExists()) {
+      this._dialog.open(DialogComponent, {
+        data: {
+          title: ERROR,
+          message: this._playerExists() ? 'Player already exists!' : 'Enter valid player name!'
+        }
+      });
       return;
     }
 
@@ -40,12 +47,18 @@ export class PlayCardsCounterComponent implements OnInit {
     });
 
     this.playerName = '';
-    this.resetScores();
+    this.resetScores(false);
     this._storeOnLocalStorage();
   }
 
   addScore(): void {
     if (this._areScoresZeroOrNotDefined() || !this._arePlayersAndScoresEqual()) {
+      this._dialog.open(DialogComponent, {
+        data: {
+          title: ERROR,
+          message: 'Enter valid score for all the players!'
+        }
+      });
       return;
     }
 
@@ -89,31 +102,39 @@ export class PlayCardsCounterComponent implements OnInit {
     });
   }
 
-  resetScores(): void {
-    this.players.forEach(player => {
-      player.scores = [];
+  resetScores(showDialog = true): void {
+    if (!showDialog) {
+      this._resetScores();
+      return;
+    }
+
+    this._dialog.open(DialogComponent, {
+      data: {
+        title: ARE_YOU_SURE,
+        message: 'This action will reset scores for all the players!',
+        confirmCallback: () => { this._resetScores() }
+      }
     });
-    this._storeOnLocalStorage();
   }
 
   resetPlayers(): void {
-    this.players = [];
-    this._storeOnLocalStorage();
+    this._dialog.open(DialogComponent, {
+      data: {
+        title: ARE_YOU_SURE,
+        message: 'This action will reset all the players!',
+        confirmCallback: () => { this._resetPlayers() }
+      }
+    });
   }
 
   removePlayer({ name }: IPlayer): void {
-    this.players = this.players.filter(player => player.name !== name);
-    this.scoreInputs = Object.keys(this.scoreInputs).reduce((result, player) => {
-      if (player === name) {
-        return result;
+    this._dialog.open(DialogComponent, {
+      data: {
+        title: ARE_YOU_SURE,
+        message: `This action will remove <b>${name}</b> player!`,
+        confirmCallback: () => { this._removePlayer(name) }
       }
-
-      result[player] = this.scoreInputs[player];
-      return result;
-    }, {});
-
-    this._sortPlayers(this.totalHeaderArrowDown);
-    this._storeOnLocalStorage();
+    });
   }
 
   private _areScoresZeroOrNotDefined(): boolean {
@@ -152,5 +173,32 @@ export class PlayCardsCounterComponent implements OnInit {
 
   private _getDataFromLocalStorage(): IPlayer[] {
     return this.storage.get(this.STORAGE_KEY) || []
+  }
+
+  private _resetPlayers(): void {
+    this.players = [];
+    this._storeOnLocalStorage();
+  }
+
+  private _resetScores(): void {
+    this.players.forEach(player => {
+      player.scores = [];
+    });
+    this._storeOnLocalStorage();
+  }
+
+  private _removePlayer(name: string): void {
+    this.players = this.players.filter(player => player.name !== name);
+    this.scoreInputs = Object.keys(this.scoreInputs).reduce((result, player) => {
+      if (player === name) {
+        return result;
+      }
+
+      result[player] = this.scoreInputs[player];
+      return result;
+    }, {});
+
+    this._sortPlayers(this.totalHeaderArrowDown);
+    this._storeOnLocalStorage();
   }
 }

@@ -5,50 +5,50 @@
         <button class="add-button" color="primary" mat-raised-button (click)="addPlayer()"> Add Player </button>
     </div>
 
-    <div *ngIf="players.length > 0">
-        <div class="action-buttons">
-
-            <button color="warn" mat-raised-button (click)="resetScores()"> Reset Scores </button>
-            <button class="reset-players" color="warn" mat-raised-button (click)="resetPlayers()"> Reset Players
-            </button>
-        </div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Player</th>
-                    <th (click)="onTotalHeaderClick()">Score
-                        <i class="fa"
-                            [ngClass]="{'fa-angle-down': totalHeaderArrowDown, 'fa-angle-up': !totalHeaderArrowDown}"></i>
-                    </th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let player of players; index as playerIndex">
-                    <td class="player-name"> {{ player.name }} </td>
-                    <td class="player-total-score">
-                        <button mat-stroked-button color="primary"
-                            (click)="openScoresDialog(player)">{{ getPlayerTotalScore(player) }}</button>
-                    </td>
-                    <td class="player-score-input">
-                        <div class="input-group">
-                            <input type="number" class="form-control" [(ngModel)]="scoreInputs[player.name]"
-                                placeholder="Enter Score!">
-                        </div>
-                    </td>
-                    <td>
-                        <button mat-mini-fab color="warn" (click)="removePlayer(player)">
-                            <i class="fa fa-minus-circle" aria-hidden="true"></i>
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="action-buttons">
+        <button [disabled]="players.length === 0" color="warn" mat-raised-button (click)="resetScores()"> Reset Scores
+        </button>
+        <button [disabled]="players.length === 0" class="reset-players" color="warn" mat-raised-button
+            (click)="resetPlayers()"> Reset Players
+        </button>
     </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th (click)="onTotalHeaderClick()">Score
+                    <i class="fa"
+                        [ngClass]="{'fa-angle-down': totalHeaderArrowDown, 'fa-angle-up': !totalHeaderArrowDown}"></i>
+                </th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let player of players; index as playerIndex">
+                <td class="player-name"> {{ player.name }} </td>
+                <td class="player-total-score">
+                    <button mat-stroked-button color="primary"
+                        (click)="openScoresDialog(player)">{{ getPlayerTotalScore(player) }}</button>
+                </td>
+                <td class="player-score-input">
+                    <div class="input-group">
+                        <input type="number" class="form-control" [(ngModel)]="scoreInputs[player.name]"
+                            placeholder="Enter Score!">
+                    </div>
+                </td>
+                <td>
+                    <button mat-mini-fab color="warn" (click)="removePlayer(player)">
+                        <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 <div class="footer">
-    <button *ngIf="players.length > 0" color="primary" class="add-score-btn" mat-raised-button (click)="addScore()">
+    <button [disabled]="players.length === 0" color="primary" class="add-score-btn" mat-raised-button
+        (click)="addScore()">
         Add Score
     </button>
 </div>

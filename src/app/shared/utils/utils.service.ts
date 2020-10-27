@@ -2,6 +2,10 @@ export function isString(value: string): boolean {
     return typeof value === 'string';
 }
 
+export function isFunction(value: any): boolean {
+    return typeof value === 'function';
+}
+
 export function isNullOrUndefined(value: any): boolean {
     return value === null || value === undefined;
 }

@@ -7,8 +7,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { MaterialModule } from './material.module';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+import { DialogComponent } from './dialog/dialog.component';
 
-const components = [LoadingSpinnerComponent]
+const components = [LoadingSpinnerComponent, DialogComponent]
 
 @NgModule({
     declarations: [components],
