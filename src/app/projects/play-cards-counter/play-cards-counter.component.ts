@@ -104,6 +104,7 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
     let dialogRef = this._dialog.open(EditPlayerDialogComponent, {
       data: {
         player: player,
+        players: this.players,
         totalScore: this._getTotalCount(player)
       }
     });
