@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { StocksWatchComponent } from './projects/stocks-watch/stocks-watch.component';
 import { InfoComponent } from './info/info.component';
+import { PlayCardsCounterComponent } from './projects/play-cards-counter/play-cards-counter.component';
 
 const routes: Routes = [
   { path: '', component: InfoComponent },
   { path: 'home', component: InfoComponent },
   { path: 'stocks-watch', component: StocksWatchComponent },
+  { path: 'counter', component: PlayCardsCounterComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 

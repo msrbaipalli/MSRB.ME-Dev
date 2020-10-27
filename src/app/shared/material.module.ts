@@ -34,6 +34,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
     exports: [
@@ -72,6 +73,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
         MatTooltipModule,
         MatTreeModule,
         MatProgressSpinnerModule,
+        MatListModule,
         PortalModule
     ]
 })

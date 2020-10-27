@@ -1,0 +1,72 @@
+@import 'src/app/shared/shared.scss';
+
+:host {
+    font-size: 14px;
+
+    button {
+        font-size: 14px;
+    }
+
+    .reset-players {
+        float: right;
+    }
+
+    .add-button {
+        border-radius: 0 4px 4px 0;
+    }
+
+    table {
+        margin: 0 0 80px 0;
+        width: 100%;
+        border: 1px solid #ECEFF1;
+
+        td, th {
+            padding: 10px;
+        }
+
+        thead {
+            background: #ECEFF1;
+            color: $black;
+        }
+
+        .player-score-input input {
+            min-width: 58px;
+        }
+
+        .player-score {
+            button {
+                padding: 0 10px;
+            }
+        }
+    }
+
+    .reset-score-btn {
+        float: left;
+        background: $dark-red;
+    }
+
+    .player-name {
+        text-transform: capitalize;
+    }
+
+    .action-buttons {
+        margin: 15px 0;
+    }
+    
+    .footer {
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        background: #ECEFF1;
+        bottom: 0;
+
+        .add-score-btn {
+            position: fixed;
+            bottom: -5px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0px 10px;
+        }
+    }
+}
+

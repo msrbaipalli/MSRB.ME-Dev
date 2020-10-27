@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>{{ player.name + ' Scores!' }}</h1>
+
+<div mat-dialog-content>
+    <mat-list role="list">
+        <mat-list-item role="listitem" *ngFor="let score of player.scores; index as scoreIndex">
+            {{ (scoreIndex + 1) + '. ' + score}}
+        </mat-list-item>
+        <mat-list-item role="listitem">
+            <div>Total Score: <b>{{ data.totalScore }}</b></div>
+        </mat-list-item>
+    </mat-list>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-flat-button color="primary" [mat-dialog-close]="player" cdkFocusInitial>Close</button>
+</div>

@@ -1,0 +1,13 @@
+:host {
+    .mat-dialog-title {
+        margin: 0;
+    }
+
+    .mat-dialog-content {
+        width: 200px;
+
+        .mat-list-item {
+            height: 40px;
+        }
+    }
+}
