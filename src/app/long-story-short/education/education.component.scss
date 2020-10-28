@@ -46,6 +46,7 @@
     }
 
     mat-card {
+        box-shadow: none;
         border-radius: 0;
         border-left: 2px dotted $theme-color;
         margin: 15px 0;
@@ -69,6 +70,8 @@
 
     mat-card-content {
         margin-left: 60px;
+        color: #6E757C;
+        font-size: 16px;
 
         p {
             margin-bottom: 6px;

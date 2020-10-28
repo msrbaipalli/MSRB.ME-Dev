@@ -9,12 +9,11 @@
 
     mat-chip-list span {
         font-size: 14px;
+        margin-left: 5px;
     }
 
     mat-chip {
         cursor: pointer;
         font-size: 12px;
-        color: #fff;
-        background-color: $theme-color;
     }
 }

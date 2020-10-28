@@ -3,7 +3,7 @@
     <hr>
     <mat-chip-list>
         <span>Example search keywords:</span>
-        <mat-chip (click)="onHintClick(hint)" color="primary" selected *ngFor="let hint of searchHints">
+        <mat-chip (click)="onHintClick(hint)" *ngFor="let hint of searchHints">
             {{ hint }}
         </mat-chip>
     </mat-chip-list>
