@@ -103,6 +103,7 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
       data: {
         player: player,
         players: this.players,
+        scoreInputs: this.scoreInputs,
         totalScore: this._getTotalCount(player)
       }
     });

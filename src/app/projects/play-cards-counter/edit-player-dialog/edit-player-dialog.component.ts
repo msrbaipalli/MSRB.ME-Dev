@@ -20,6 +20,7 @@ export class EditPlayerDialogComponent implements OnInit {
   }
 
   onSubmit(): void {
+    delete this.data.scoreInputs[this.playerName];
     this.data.player.name = this.playerName;
   }
 
