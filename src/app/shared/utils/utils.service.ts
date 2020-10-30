@@ -1,3 +1,5 @@
+import { ValueType } from "./utils.constants";
+
 export function isString(value: string): boolean {
     return typeof value === 'string';
 }
@@ -22,4 +24,18 @@ export function buildDate(beginDate: string, endDate: string): string {
     const endDateValue = endDate && `${monthNames[eDate.getMonth()]} ${eDate.getFullYear()}`;
 
     return `${beginDateValue} - ${endDateValue || 'Present'}`;
+}
+
+export function getValueFromObjectsByType(obj: any, type: string): any {
+    const objKeys = Object.keys(obj);
+    let lowestScore = obj[objKeys[0]];
+    let highestScore = obj[objKeys[0]];
+
+    for (let i = 1; i < objKeys.length; i++) {
+        const value = obj[objKeys[i]];
+        if (value < lowestScore) lowestScore = value;
+        if (value > highestScore) highestScore = value;
+    }
+
+    return type === ValueType.Low ? lowestScore : highestScore;
 }

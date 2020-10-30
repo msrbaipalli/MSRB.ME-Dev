@@ -24,7 +24,7 @@
         <tbody>
             <tr *ngFor="let player of players; index as playerIndex">
                 <td class="player-name">
-                    <button mat-stroked-button color="primary"
+                    <button mat-stroked-button color="primary" [ngClass]="{'rankOnePlayer' : isRankOnePlayer(player)}"
                         (click)="onPlayerClick(player)">{{ player.name }}</button>
                 </td>
                 <td class="player-total-score">
@@ -59,4 +59,20 @@
             (click)="resetPlayers()"> <i class="fa fa-refresh" aria-hidden="true"></i> Players
         </button>
     </div>
+
+    <button class="menu-mat-icon-button" mat-icon-button [matMenuTriggerFor]="menu"
+        aria-label="Example icon-button with a menu">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+    </button>
+    <mat-menu #menu="matMenu">
+        <div class="menu-item">
+            <section>
+                <label>Score Rank Type: </label>
+                <mat-radio-group [(ngModel)]="scoreRankType" (change)="onScoreRankTypeChange()">
+                    <mat-radio-button value="low">Low</mat-radio-button>
+                    <mat-radio-button value="high">High</mat-radio-button>
+                </mat-radio-group>
+            </section>
+        </div>
+    </mat-menu>
 </div>

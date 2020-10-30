@@ -25,6 +25,11 @@
             color: $black;
         }
 
+        .rankOnePlayer {
+            background: #00897B;
+            color: $white;
+        }
+
         .player-score-input input {
             min-width: 58px;
         }
@@ -72,5 +77,39 @@
             }
         }
     }
+
+    button.menu-mat-icon-button {
+        position: absolute;
+        right: 0;
+        padding: 14px 0;
+        bottom: 24px;
+        font-size: 20px;
+    }
 }
 
+::ng-deep {
+    .cdk-overlay-container {
+        .mat-menu-panel {
+            margin-right: 5px;
+            padding: 15px;
+            max-width: 100%;
+        }
+    }
+
+    .mat-menu-content {
+        .menu-item {
+            margin-bottom: 10px;
+        }
+
+        section {
+            label {
+                margin-bottom: 3px;
+                padding-right: 5px;
+            }
+        }
+    }
+
+    .mat-radio-button ~ .mat-radio-button {
+        margin-left: 5px;
+    }
+}

@@ -1,11 +1,11 @@
 import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { isEmptyString, isNullOrUndefined } from 'src/app/shared/utils/utils.service';
+import { getValueFromObjectsByType, isEmptyString, isNullOrUndefined } from 'src/app/shared/utils/utils.service';
 import { IPlayer } from './play-cards-counter.interfaces';
 import { ScoresDialogComponent } from './scores-dialog/scores-dialog.component';
 import { LOCAL_STORAGE, StorageService } from 'ngx-webstorage-service';
 import { DialogComponent } from 'src/app/shared/dialog/dialog.component';
-import { ARE_YOU_SURE, ERROR } from './play-cards-counter.constants';
+import { ARE_YOU_SURE, ERROR, SCORE_RANK_TYPE, STORAGE_TYPE_KEY } from './play-cards-counter.constants';
 import { EditPlayerDialogComponent } from './edit-player-dialog/edit-player-dialog.component';
 import { Subscription } from 'rxjs';
 
@@ -18,6 +18,7 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
   playerName: string = '';
   players: IPlayer[] = [];
   scoreInputs = {};
+  scoreRankType: string;
   totalHeaderArrowDown = true;
   STORAGE_KEY: string;
 
@@ -30,7 +31,8 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.STORAGE_KEY = this.constructor.name;
-    this.players = this._getDataFromLocalStorage();
+    this.players = this._getDataFromLocalStorage(STORAGE_TYPE_KEY.PLAYERS);
+    this.scoreRankType = this._getScoreRankType();
     this._sortPlayers();
   }
 
@@ -88,8 +90,7 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
   }
 
   getPlayerTotalScore(player: IPlayer): number | string {
-    const total = this._getTotalCount(player);
-    return isNullOrUndefined(this._getTotalCount(player)) ? '-' : total;
+    return isNullOrUndefined(player.score) ? '-' : player.score;
   }
 
   onTotalHeaderClick(): void {
@@ -104,7 +105,7 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
         player: player,
         players: this.players,
         scoreInputs: this.scoreInputs,
-        totalScore: this._getTotalCount(player)
+        totalScore: player.score
       }
     });
 
@@ -113,11 +114,23 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
     );
   }
 
+  onScoreRankTypeChange(): void {
+    this._storeOnLocalStorage();
+  }
+
+  isRankOnePlayer(player: IPlayer): boolean {
+    const players: IPlayer[] = this.scoreRankType === SCORE_RANK_TYPE.Low
+      ? this._getPlayerBasedOnScore(SCORE_RANK_TYPE.Low)
+      : this._getPlayerBasedOnScore(SCORE_RANK_TYPE.High);
+
+    return players.some(plyr => plyr.name === player.name);
+  }
+
   openScoresDialog(player: IPlayer): void {
     this._dialog.open(ScoresDialogComponent, {
       data: {
         player: player,
-        totalScore: this._getTotalCount(player)
+        totalScore: player.score
       }
     });
   }
@@ -167,11 +180,11 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
 
   private _sortPlayers(ascOrder = true): void {
     this.players.sort((p1, p2) => {
-      if (this._getTotalCount(p1) < this._getTotalCount(p2)) {
+      if (p1.score < p2.score) {
         return ascOrder ? -1 : 1;
       }
 
-      if (this._getTotalCount(p1) > this._getTotalCount(p2)) {
+      if (p1.score > p2.score) {
         return ascOrder ? 1 : -1;
       }
 
@@ -179,20 +192,17 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
     });
   }
 
-  private _getTotalCount(player: IPlayer): number {
-    return player.scores.reduce((a, b) => a + b, 0)
-  }
-
   private _arePlayersAndScoresEqual(): boolean {
     return Object.keys(this.scoreInputs).length === Object.keys(this.players).length;
   }
 
   private _storeOnLocalStorage(): void {
-    this.storage.set(this.STORAGE_KEY, this.players);
+    this.storage.set(this.STORAGE_KEY + STORAGE_TYPE_KEY.PLAYERS, this.players);
+    this.storage.set(this.STORAGE_KEY + STORAGE_TYPE_KEY.SCORE_RANK_TYPE, this.scoreRankType);
   }
 
-  private _getDataFromLocalStorage(): IPlayer[] {
-    return this.storage.get(this.STORAGE_KEY) || []
+  private _getDataFromLocalStorage(key: string): any {
+    return this.storage.get(this.STORAGE_KEY + key) || []
   }
 
   private _resetPlayersHandler(): void {
@@ -232,10 +242,31 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
       }
 
       playerDetails.scores.push(playerScore);
+      playerDetails.score = playerDetails.scores.reduce((a, b) => a + b, 0);
       this.scoreInputs[playerName] = 0;
     });
 
     this._sortPlayers(this.totalHeaderArrowDown);
     this._storeOnLocalStorage();
+  }
+
+  private _getPlayerBasedOnScore(scoreRankType: SCORE_RANK_TYPE): IPlayer[] {
+    const players = this.players.reduce((result, player) => {
+      result[player.name] = player.score
+      return result;
+    }, {});
+    let lowestScore = getValueFromObjectsByType(players, SCORE_RANK_TYPE.Low);
+    let highestScore = getValueFromObjectsByType(players, SCORE_RANK_TYPE.High);
+
+    return this.players.filter(player =>
+      (scoreRankType === SCORE_RANK_TYPE.Low && player.score === lowestScore) || (scoreRankType === SCORE_RANK_TYPE.High && player.score === highestScore)
+    );
+  }
+
+  private _getScoreRankType(): string {
+    const scoreRankType = this._getDataFromLocalStorage(STORAGE_TYPE_KEY.SCORE_RANK_TYPE);
+    return (isNullOrUndefined(scoreRankType) || scoreRankType.length === 0)
+      ? SCORE_RANK_TYPE.Low
+      : scoreRankType;
   }
 }

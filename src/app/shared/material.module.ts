@@ -35,6 +35,8 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
     exports: [
@@ -74,6 +76,8 @@ import { MatListModule } from '@angular/material/list';
         MatTreeModule,
         MatProgressSpinnerModule,
         MatListModule,
+        MatMenuModule,
+        MatRadioModule,
         PortalModule
     ]
 })
