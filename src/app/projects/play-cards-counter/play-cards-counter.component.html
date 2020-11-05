@@ -1,10 +1,32 @@
 <div class="main-container">
     <div class="input-group">
+        <button class="menu-mat-icon-button" mat-icon-button [matMenuTriggerFor]="menu"
+            aria-label="Example icon-button with a menu">
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+        </button>
+        <mat-menu #menu="matMenu">
+            <div class="menu-item" (click)="$event.stopPropagation()">
+                <section>
+                    <label>Score Rank Type: </label>
+                    <mat-radio-group [(ngModel)]="scoreMenu.scoreRankType" (change)="onScoreRankTypeChange()">
+                        <mat-radio-button value="low">Low</mat-radio-button>
+                        <mat-radio-button value="high">High</mat-radio-button>
+                    </mat-radio-group>
+                </section>
+                <section>
+                    <label>Max Score: </label>
+                    <mat-form-field>
+                        <input type="number" [(ngModel)]="scoreMenu.maxScore" matInput (change)="onMaxScoreChange()">
+                    </mat-form-field>
+                </section>
+            </div>
+        </mat-menu>
         <input (keyup.enter)="addPlayer()" type="text" class="form-control" placeholder="Enter Player Name!"
             [(ngModel)]="playerName">
         <button class="add-button" color="primary" mat-raised-button (click)="addPlayer()">
             <i class="fa fa-plus" aria-hidden="true"></i>
         </button>
+
     </div>
 
     <table class="table">
@@ -24,8 +46,9 @@
         <tbody>
             <tr *ngFor="let player of players; index as playerIndex">
                 <td class="player-name">
-                    <button mat-stroked-button color="primary" [ngClass]="{'rankOnePlayer' : isRankOnePlayer(player)}"
-                        (click)="onPlayerClick(player)">{{ player.name }}</button>
+                    <button mat-stroked-button color="primary"
+                        [ngClass]="{'rankOnePlayer' : isRankOnePlayer(player), 'lostPlayer': isPlayerLost(player) }"
+                        (click)="onPlayerClick(player)">{{ getPlayerName(player, playerIndex) }}</button>
                 </td>
                 <td class="player-total-score">
                     <button mat-stroked-button color="primary"
@@ -59,20 +82,4 @@
             (click)="resetPlayers()"> <i class="fa fa-refresh" aria-hidden="true"></i> Players
         </button>
     </div>
-
-    <button class="menu-mat-icon-button" mat-icon-button [matMenuTriggerFor]="menu"
-        aria-label="Example icon-button with a menu">
-        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-    </button>
-    <mat-menu #menu="matMenu">
-        <div class="menu-item">
-            <section>
-                <label>Score Rank Type: </label>
-                <mat-radio-group [(ngModel)]="scoreRankType" (change)="onScoreRankTypeChange()">
-                    <mat-radio-button value="low">Low</mat-radio-button>
-                    <mat-radio-button value="high">High</mat-radio-button>
-                </mat-radio-group>
-            </section>
-        </div>
-    </mat-menu>
 </div>

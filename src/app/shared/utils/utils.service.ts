@@ -12,6 +12,10 @@ export function isNullOrUndefined(value: any): boolean {
     return value === null || value === undefined;
 }
 
+export function isEmptyArray(value: any[]): boolean {
+    return isNullOrUndefined(value) || value.length === 0;
+}
+
 export function isEmptyString(value: string): boolean {
     return isString(value) && value.trim() === '';
 }

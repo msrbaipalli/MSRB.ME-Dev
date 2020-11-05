@@ -8,7 +8,15 @@
     }
 
     .add-button {
+        height: 38px;
         border-radius: 0 4px 4px 0;
+    }
+
+    button.menu-mat-icon-button {
+        padding: 14px 0;
+        bottom: 17px;
+        font-size: 24px;
+        z-index: 99;
     }
 
     table {
@@ -28,6 +36,12 @@
         .rankOnePlayer {
             background: #00897B;
             color: $white;
+        }
+
+        .lostPlayer {
+            background: $dark-red;
+            color: $white;
+            text-decoration: line-through;
         }
 
         .player-score-input input {
@@ -77,19 +91,12 @@
             }
         }
     }
-
-    button.menu-mat-icon-button {
-        position: absolute;
-        right: 0;
-        padding: 14px 0;
-        bottom: 24px;
-        font-size: 20px;
-    }
 }
 
 ::ng-deep {
     .cdk-overlay-container {
         .mat-menu-panel {
+            margin-top: 20px;
             margin-right: 5px;
             padding: 15px;
             max-width: 100%;

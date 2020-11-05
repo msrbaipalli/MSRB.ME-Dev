@@ -131,3 +131,7 @@ input[type="color"]:focus,
   box-shadow: none;
   outline: 0 none;
 }
+
+input.required-element {
+  border-color: $dark-red;
+}

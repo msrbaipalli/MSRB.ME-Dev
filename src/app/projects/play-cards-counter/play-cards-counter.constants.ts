@@ -6,5 +6,5 @@ export enum SCORE_RANK_TYPE {
 };
 export const STORAGE_TYPE_KEY = {
     PLAYERS: 'players',
-    SCORE_RANK_TYPE: 'scoreRankType'
+    SCORE_MENU: 'scoreMenu'
 };
