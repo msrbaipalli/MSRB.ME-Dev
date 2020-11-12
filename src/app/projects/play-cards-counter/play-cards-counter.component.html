@@ -23,7 +23,8 @@
         </mat-menu>
         <input (keyup.enter)="addPlayer()" type="text" class="form-control" placeholder="Enter Player Name!"
             [(ngModel)]="playerName">
-        <button class="add-button" color="primary" mat-raised-button (click)="addPlayer()">
+        <button [disabled]="isAddPlayerDisabled()" class="add-button" color="primary" mat-raised-button
+            (click)="addPlayer()">
             <i class="fa fa-plus" aria-hidden="true"></i>
         </button>
 

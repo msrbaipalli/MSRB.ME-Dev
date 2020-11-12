@@ -41,7 +41,7 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
   }
 
   addPlayer(): void {
-    if (isNullOrUndefined(this.playerName) || isEmptyString(this.playerName) || this._playerExists()) {
+    if (this._isPlayerNameEmpty() || this._playerExists()) {
       this._dialog.open(DialogComponent, {
         data: {
           title: ERROR,
@@ -133,6 +133,10 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
 
   isPlayerLost(player: IPlayer): boolean {
     return !isNullOrUndefined(this.scoreMenu.maxScore) && this.scoreMenu.maxScore < player.score;
+  }
+
+  isAddPlayerDisabled(): boolean {
+    return this._isPlayerNameEmpty();
   }
 
   getPlayerName(player: IPlayer, index: number): string {
@@ -287,5 +291,9 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
       scoreRankType: SCORE_RANK_TYPE.Low,
       maxScore: 200
     };
+  }
+
+  private _isPlayerNameEmpty(): boolean {
+    return isNullOrUndefined(this.playerName) || isEmptyString(this.playerName);
   }
 }
