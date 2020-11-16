@@ -44,6 +44,11 @@
             text-decoration: line-through;
         }
 
+        .lastPlayer {
+            background: #ef6c00;
+            color: $white; 
+        }
+
         .player-score-input input {
             min-width: 58px;
         }
@@ -112,6 +117,14 @@
             label {
                 margin-bottom: 3px;
                 padding-right: 5px;
+            }
+
+            .menu-ok-btn {
+                float: right;
+            }
+
+            .mat-slide-toggle {
+                height: 35px;
             }
         }
     }

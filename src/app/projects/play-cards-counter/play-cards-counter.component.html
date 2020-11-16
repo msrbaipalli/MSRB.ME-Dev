@@ -8,7 +8,8 @@
             <div class="menu-item" (click)="$event.stopPropagation()">
                 <section>
                     <label>Score Rank Type: </label>
-                    <mat-radio-group [(ngModel)]="scoreMenu.scoreRankType" (change)="onScoreRankTypeChange()">
+                    <mat-radio-group color="primary" [(ngModel)]="scoreMenu.scoreRankType"
+                        (change)="onScoreRankTypeChange()">
                         <mat-radio-button value="low">Low</mat-radio-button>
                         <mat-radio-button value="high">High</mat-radio-button>
                     </mat-radio-group>
@@ -19,7 +20,23 @@
                         <input type="number" [(ngModel)]="scoreMenu.maxScore" matInput (change)="onMaxScoreChange()">
                     </mat-form-field>
                 </section>
+                <section>
+                    <mat-slide-toggle color="primary" [(ngModel)]="scoreMenu.highlightTopFirstPlayer">Highlight Top
+                        First Player
+                    </mat-slide-toggle>
+                </section>
+                <section>
+                    <mat-slide-toggle color="primary" [(ngModel)]="scoreMenu.highlightLastPlayer">Highlight Last Player
+                    </mat-slide-toggle>
+                </section>
+                <section>
+                    <mat-slide-toggle color="primary" [(ngModel)]="scoreMenu.highlightLostPlayer">Highlight Lost Player
+                    </mat-slide-toggle>
+                </section>
             </div>
+            <section>
+                <button class="menu-ok-btn" mat-flat-button color="primary">OK</button>
+            </section>
         </mat-menu>
         <input (keyup.enter)="addPlayer()" type="text" class="form-control" placeholder="Enter Player Name!"
             [(ngModel)]="playerName">
@@ -48,7 +65,7 @@
             <tr *ngFor="let player of players; index as playerIndex">
                 <td class="player-name">
                     <button mat-stroked-button color="primary"
-                        [ngClass]="{'rankOnePlayer' : isRankOnePlayer(player), 'lostPlayer': isPlayerLost(player) }"
+                        [ngClass]="{'rankOnePlayer' : isRankOnePlayer(player), 'lostPlayer': isPlayerLost(player), 'lastPlayer': isLastPlayer(player) }"
                         (click)="onPlayerClick(player)">{{ getPlayerName(player, playerIndex) }}</button>
                 </td>
                 <td class="player-total-score">

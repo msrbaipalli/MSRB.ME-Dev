@@ -7,7 +7,8 @@ import { LOCAL_STORAGE, StorageService } from 'ngx-webstorage-service';
 import { DialogComponent } from 'src/app/shared/dialog/dialog.component';
 import { ARE_YOU_SURE, ERROR, SCORE_RANK_TYPE, STORAGE_TYPE_KEY } from './play-cards-counter.constants';
 import { EditPlayerDialogComponent } from './edit-player-dialog/edit-player-dialog.component';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-play-cards-counter',
@@ -26,7 +27,8 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
 
   constructor(
     @Inject(LOCAL_STORAGE) private _storage: StorageService,
-    private _dialog: MatDialog
+    private _dialog: MatDialog,
+    private _http: HttpClient
   ) { }
 
   ngOnInit() {
@@ -124,6 +126,10 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
   }
 
   isRankOnePlayer(player: IPlayer): boolean {
+    if (!this.scoreMenu.highlightTopFirstPlayer) {
+      return false;
+    }
+
     const players: IPlayer[] = this.scoreMenu.scoreRankType === SCORE_RANK_TYPE.Low
       ? this._getPlayerBasedOnScore(SCORE_RANK_TYPE.Low)
       : this._getPlayerBasedOnScore(SCORE_RANK_TYPE.High);
@@ -131,7 +137,29 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
     return players.some(plyr => plyr.name === player.name);
   }
 
+  isLastPlayer(player: IPlayer): boolean {
+    if (!this.scoreMenu.highlightLastPlayer) {
+      return false;
+    }
+
+    const activePlayers = this._getActivePlayers();
+    const activePlayersLength = activePlayers.length;
+
+    if (activePlayersLength === 1 || activePlayersLength === 0) {
+      return false;
+    }
+
+    let lastPlayer = this.scoreMenu.scoreRankType === SCORE_RANK_TYPE.Low
+      ? activePlayers.reduce((max, plyr) => max.score > plyr.score ? max : plyr)
+      : activePlayers.reduce((max, plyr) => max.score < plyr.score ? max : plyr);
+    return lastPlayer.name === player.name;
+  }
+
   isPlayerLost(player: IPlayer): boolean {
+    if (!this.scoreMenu.highlightLostPlayer) {
+      return false;
+    }
+
     return !isNullOrUndefined(this.scoreMenu.maxScore) && this.scoreMenu.maxScore < player.score;
   }
 
@@ -269,7 +297,7 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
   }
 
   private _getPlayerBasedOnScore(scoreRankType: SCORE_RANK_TYPE): IPlayer[] {
-    const players = this.players.reduce((result, player) => {
+    const players = this._getActivePlayers().reduce((result, player) => {
       result[player.name] = player.score
       return result;
     }, {});
@@ -289,11 +317,27 @@ export class PlayCardsCounterComponent implements OnInit, OnDestroy {
   private _getDefaultScoreMenu(): IScoreMenu {
     return {
       scoreRankType: SCORE_RANK_TYPE.Low,
-      maxScore: 200
+      maxScore: 200,
+      highlightTopFirstPlayer: true,
+      highlightLastPlayer: true,
+      highlightLostPlayer: true
     };
   }
 
   private _isPlayerNameEmpty(): boolean {
     return isNullOrUndefined(this.playerName) || isEmptyString(this.playerName);
+  }
+
+  private _getActivePlayers(): IPlayer[] {
+    return this.players.filter(player => !this.isPlayerLost(player));
+  }
+
+  private _getData(): Observable<any> {
+    return this._http.get("assets/score-data/data.json");
+  }
+
+  private _setData(data: any): void {
+    this.players = data.players;
+    this.scoreMenu = data.scoreMenu;
   }
 }

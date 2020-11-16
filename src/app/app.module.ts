@@ -10,6 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { LongStoryShortModule } from './long-story-short/long-story-short.module';
 import { SearchMeModule } from './search-me/search-me.module';
 import { ProjectsModule } from './projects/projects.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,13 +22,14 @@ import { ProjectsModule } from './projects/projects.module';
   ],
   imports: [
     AppRoutingModule,
+    HttpClientModule,
     LongStoryShortModule,
     ProjectsModule,
     SearchMeModule,
     SharedModule,
     NgxGistModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

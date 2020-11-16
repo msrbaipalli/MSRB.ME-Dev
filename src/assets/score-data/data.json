@@ -1,0 +1,36 @@
+{
+    "players": [
+        {
+            "name": "Test 4",
+            "scores": [
+                0
+            ],
+            "score": 0
+        },
+        {
+            "name": "Test 1",
+            "scores": [
+                10
+            ],
+            "score": 10
+        },
+        {
+            "name": "Test 2",
+            "scores": [
+                20
+            ],
+            "score": 20
+        },
+        {
+            "name": "Test 3",
+            "scores": [
+                30
+            ],
+            "score": 30
+        }
+    ],
+    "scoreMenu": {
+        "maxScore": 200,
+        "scoreRankType": "low"
+    }
+}
