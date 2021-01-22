@@ -1,0 +1,20 @@
+<div class="items-slider-container">
+    <div class="slider-title">
+        {{title}}
+    </div>
+
+    <div class="slider-row">
+        <div class="row__inner">
+            <div class="tile" *ngFor="let item of data">
+                <div class="tile__media">
+                    <img class="tile__img" [src]="item.imageUrl" alt="" />
+                </div>
+                <div class="tile__details">
+                    <div class="tile__title">
+                        {{item.title}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

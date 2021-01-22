@@ -1,0 +1,86 @@
+@import 'src/app/shared/shared.scss';
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+
+.card {
+      color: #6E757C;
+      margin-bottom: 25px;
+      border-radius: 0px;
+
+      .card-title {
+        color: #3C4647;
+        font-size: 32px;
+        padding-bottom: 15px;
+      }
+}
+
+.card-header {
+    background: #878E95;
+    color: #F7F7F7;
+}
+
+.marginBottom {
+    margin-bottom: 10px;
+}
+
+.innerCard {
+    box-shadow: none;
+}
+
+.innerCard a{
+    color: #6E757C;
+}
+
+.fas-tag {
+    font-size: 45px;
+    color: #3C4647;
+    padding: 10px;
+}
+
+hr {
+    margin: 30px 0px;
+    padding: .1px 0;
+    background: #6F757B;
+}
+
+.about-container {
+    .imageColumn {
+        max-width: 200px;
+
+        .myImage {
+            width: 180px;
+            border-radius: 50%;
+        }
+    }
+
+    .about-me {
+        .tagLine {
+            color: $black;
+            font-weight: 700;
+            font-size: 30px;
+            font-family: 'Pompiere', cursive;
+            text-transform: uppercase;
+        }
+
+        .highlightText {
+            color: #AC705D;
+        }
+
+        .socialIcons {
+            margin-top: 25px;
+        }
+          
+        .socialIcons p {
+            letter-spacing: 1.2em;
+            display: inline-block;
+        }
+          
+        .socialIcons p i:hover {
+            color: #736C80;
+        }
+          
+        .socialIcons p i {
+            font-size: 32px;
+            color: #414051;
+        }
+    }
+}

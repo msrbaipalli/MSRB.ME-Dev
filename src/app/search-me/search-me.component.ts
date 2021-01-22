@@ -17,6 +17,7 @@ export class SearchMeComponent implements OnInit {
 
   ngOnInit() {
     this._reset();
+    this.searchValue = "about";
   }
 
   hasSearchMatch(key: string): boolean {

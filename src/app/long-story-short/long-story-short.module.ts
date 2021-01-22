@@ -7,8 +7,10 @@ import { LongStoryShortComponent } from './long-story-short.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SkillsComponent } from './skills/skills.component';
 import { WorkComponent } from './work/work.component';
+import { AboutComponent } from './about/about.component';
 
 const components = [
+    AboutComponent,
     CertificatesComponent,
     EducationComponent,
     InterestsComponent,
@@ -19,7 +21,7 @@ const components = [
 ]
 
 @NgModule({
-    declarations: [components],
+    declarations: [components, AboutComponent],
     exports: [components],
     imports: [SharedModule]
 })

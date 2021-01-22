@@ -27,6 +27,7 @@
     <div class="form-group searchMeResult-div">
         <div class="searchItem" *ngIf="hasSearchValue()">
             <search-not-found *ngIf="!hasResults()" [searchMeComponent]="this"></search-not-found>
+            <app-about *ngIf="hasSearchMatch('about')"></app-about>
             <app-work *ngIf="hasSearchMatch('work')"></app-work>
             <app-education *ngIf="hasSearchMatch('education')"></app-education>
             <app-skills *ngIf="hasSearchMatch('skills')"></app-skills>

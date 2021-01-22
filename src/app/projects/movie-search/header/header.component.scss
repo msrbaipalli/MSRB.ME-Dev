@@ -1,0 +1,14 @@
+:host::ng-deep {
+    mat-toolbar {
+        background: #151515;
+        color: #fff;
+        padding: 0px;
+        margin: -25px 0px 0px 0px;
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    .example-spacer {
+        flex: 1 1 auto;
+    }
+}

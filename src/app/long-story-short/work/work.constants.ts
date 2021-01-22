@@ -33,7 +33,7 @@ export const WORK_EXPERIENCE_LIST = [
         ],
         role: 'Software Developer',
         companyDescription: 'Egen Solutions is an enterprise web and mobile application development firm dedicated to build better user experiences at the for front of design. Egen also has an IT Talent Acquisition division and places highly skilled tech professionals in companies across the US.',
-        environment: 'HTML5, CSS3, JavaScript, AngularJS 1.6 and 8, Angular Material, Ngx Bootstrap, AJAX, JSON, SASS, LESS, Node, npm, Agile, Jenkins, Genesis, Visual Studio Code, IntelliJ, Postman, Source Tree, GIT, TFS.'
+        environment: 'HTML5, CSS3, JavaScript, AngularJS 1.6 and 8, Angular Material, Ngx Bootstrap, Java Spring Boot, AJAX, JSON, SASS, LESS, Node, npm, Agile, Jenkins, Genesis, Visual Studio Code, IntelliJ, Postman, Source Tree, GIT, TFS.'
     },
     {
         company: 'Kent State University',

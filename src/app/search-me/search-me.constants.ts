@@ -1,6 +1,10 @@
 const skills = 'HTML, CSS3, SASS, LESS, Angular, JavaScript, NodeJs, Java, Dot Net, NPM, Grunt, Git, GitHub, GitLab, Terminal, Jenkins';
 
 export const SEARCH_ITEMS = {
+    about: [
+        'about',
+        'introduction'
+    ],
     work: [
         'work',
         'experience',
@@ -53,4 +57,4 @@ export const SEARCH_ITEMS = {
     ]
 }
 
-export const SEARCH_HITNS = ['Work Experience', 'Education', 'Skills', 'Certifications', 'Interests']
+export const SEARCH_HITNS = ['About', 'Work Experience', 'Education', 'Skills', 'Certifications', 'Interests']
