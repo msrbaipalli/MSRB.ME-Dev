@@ -1,22 +1,34 @@
 export const WORK_EXPERIENCE_LIST = [
     {
+        company: 'UnitedHealth Group - Optum',
+        companyIcon: 'url("assets/images/uhg.png")',
+        companyUrl: 'https://www.optum.com/',
+        project: 'Optum Data Information Exchange(ODX)',
+        beginDate: '01/03/2022',
+        endDate: null,
+        location: 'Raleigh, North Carolina, United States',
+        role: 'Software Engineer II',
+        companyDescription: 'UnitedHealth Group is a health care and well-being company with team members in two distinct and complementary businesses - Optum and UnitedHealthcare - working to help build a modern, high-performing health system.',
+        environment: 'HTML5, CSS3, Angular 11, Java Spring Boot, GraphQL, Ngx Bootstrap, Karma, Jasmine Unit Test, JSON, SPLUNK, SASS, Node, npm, Agile, Jenkins, Genesis, Visual Studio Code, Postman, Source Tree, GIT, Rally, Azure Cloud.'
+    },
+    {
         company: 'Egen Solutions',
         companyIcon: 'url("assets/images/egen.png")',
         companyUrl: 'https://egen.solutions/',
         project: 'Car Tracking System(CTS)',
         beginDate: '02/13/2018',
-        endDate: null,
+        endDate: '12/31/2021',
         location: 'Naperville, Illinois, United States',
         clients: [
             {
                 company: 'UnitedHealth Group - Optum',
                 companyIcon: 'url("assets/images/uhg.png")',
-                companyUrl: 'https://www.unitedhealthgroup.com/',
+                companyUrl: 'https://www.optum.com/',
                 companyDescription: 'Optum Data Information Exchange is a platform that enables to exchange of clinical data more effectively among providers.',
                 project: 'Optum Data Information Exchange(ODX)',
                 role: 'Software Developer',
                 beginDate: '08/24/2020',
-                endDate: null,
+                endDate: '12/31/2021',
                 location: 'St Petersburg, Florida, United States'
             },
             {
