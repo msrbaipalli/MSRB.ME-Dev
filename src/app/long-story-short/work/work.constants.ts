@@ -7,9 +7,9 @@ export const WORK_EXPERIENCE_LIST = [
         beginDate: '01/03/2022',
         endDate: null,
         location: 'Raleigh, North Carolina, United States',
-        role: 'Software Engineer II',
+        role: 'Sr Software Engineer',
         companyDescription: 'UnitedHealth Group is a health care and well-being company with team members in two distinct and complementary businesses - Optum and UnitedHealthcare - working to help build a modern, high-performing health system.',
-        environment: 'HTML5, CSS3, Angular 11, Java Spring Boot, GraphQL, Ngx Bootstrap, Karma, Jasmine Unit Test, JSON, SPLUNK, SASS, Node, npm, Agile, Jenkins, Genesis, Visual Studio Code, Postman, Source Tree, GIT, Rally, Azure Cloud.'
+        environment: 'HTML5, CSS3, JavaScript, Angular 17, React, Java Spring Boot, GraphQL, Ngx Bootstrap, Karma, Jasmine Unit Test, JSON, SPLUNK, SASS, Node, npm, Agile, Jenkins, Genesis, Visual Studio Code, Postman, Source Tree, GIT, Rally, Azure Cloud.'
     },
     {
         company: 'Egen Solutions',
@@ -26,7 +26,7 @@ export const WORK_EXPERIENCE_LIST = [
                 companyUrl: 'https://www.optum.com/',
                 companyDescription: 'Optum Data Information Exchange is a platform that enables to exchange of clinical data more effectively among providers.',
                 project: 'Optum Data Information Exchange(ODX)',
-                role: 'Software Developer',
+                role: 'Software Engineer',
                 beginDate: '08/24/2020',
                 endDate: '12/31/2021',
                 location: 'St Petersburg, Florida, United States'
@@ -37,7 +37,7 @@ export const WORK_EXPERIENCE_LIST = [
                 companyUrl: 'https://www.raymondjames.com/',
                 companyDescription: 'Client Onboarding is a web-based core application used by Raymond James Financial Advisors and other internal employees to open and maintain client’s profiles and accounts.',
                 project: 'Client Onboarding(COB)',
-                role: 'Angular Frontend Developer',
+                role: 'Application Developer',
                 beginDate: '03/21/2018',
                 endDate: '08/05/2020',
                 location: 'St Petersburg, Florida, United States'

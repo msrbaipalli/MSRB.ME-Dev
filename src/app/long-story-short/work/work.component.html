@@ -34,7 +34,7 @@
                                     </div>
                                     <mat-card-title class="companyTitle"
                                         (click)="onCompanyTitleClick(client.companyUrl)">
-                                        {{ client.company  }} </mat-card-title>
+                                        {{ client.company }} </mat-card-title>
                                     <mat-card-subtitle> {{ getClientDate(client) }}
                                     </mat-card-subtitle>
                                     <mat-card-subtitle>{{ client.location }}</mat-card-subtitle>
@@ -44,7 +44,7 @@
                                     <p><span>Role</span>: {{ client.role }}</p>
                                 </mat-card-content>
                             </mat-card>
-                            <p *ngIf="workExperience.project"><span>Project</span>: {{ workExperience.project }} </p>
+                            <!-- <p *ngIf="workExperience.project"><span>Project</span>: {{ workExperience.project }} </p> -->
                             <p><span>Description</span>: {{ workExperience.companyDescription }} </p>
                             <p><span>Environment</span>: {{ workExperience.environment }} </p>
                         </mat-card-content>
